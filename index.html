@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>BellaClass | Transfer Executivo</title>
+
+  <meta name="description"
+        content="Transfer executivo pensado para mulheres, com atendimento feminino em Indaiatuba, Campinas e Região e São Paulo.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
   <style>
+
     :root {
-      --rose: #d98a98;
-      --rose-dark: #c66a7d;
-      --rose-light: #f6e4e7;
-      --brown: #4c302d;
-      --text: #3f2b2b;
-      --cream: #fcf8f8;
+      --rose: #c96878;
+      --rose-light: #f4d9dd;
+      --cream: #fffaf8;
+      --brown: #422d28;
+      --text: #372b28;
+      --muted: #75645f;
       --white: #ffffff;
-      --border: #ecd9dc;
-      --shadow: 0 10px 30px rgba(76, 48, 45, 0.08);
+      --border: #ecd9d7;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+    }
+
+    html {
       scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       color: var(--text);
       background: var(--cream);
       line-height: 1.6;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
     }
 
     a {
@@ -47,548 +52,939 @@
     }
 
     .container {
-      width: min(1120px, 92%);
-      margin: 0 auto;
+      width: min(1220px, 90%);
+      margin: auto;
     }
 
-    /* HEADER */
+
+    /* ==========================
+       MENU
+    ========================== */
+
     header {
+      background: rgba(255,255,255,.97);
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(252, 248, 248, 0.95);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #f1e3e1;
     }
 
-    .header-wrap {
+    .nav {
+      min-height: 84px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 20px;
-      padding: 16px 0;
-    }
-
-    .logo {
-      display: flex;
       align-items: center;
+      gap: 25px;
     }
 
     .logo img {
-      height: 58px;
-      width: auto;
+      width: 220px;
+      height: auto;
+      display: block;
     }
 
-    nav {
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--rose);
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--rose);
+      color: white;
+      padding: 15px 28px;
+      border-radius: 40px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: .25s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: .92;
+    }
+
+
+    /* ==========================
+       PRIMEIRA TELA
+    ========================== */
+
+    .hero {
+
+      min-height: 650px;
+
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(255,250,248,.98) 0%,
+          rgba(255,250,248,.94) 31%,
+          rgba(255,250,248,.68) 47%,
+          rgba(255,250,248,.12) 68%
+        ),
+        url("hero-bellaclass.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       display: flex;
       align-items: center;
-      gap: 28px;
-      flex-wrap: wrap;
-      justify-content: center;
     }
 
-    nav a {
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--brown);
-      font-weight: 500;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      border-radius: 999px;
-      background: var(--rose-dark);
-      color: var(--white);
-      font-weight: 700;
-      font-size: 0.92rem;
-      letter-spacing: 0.04em;
-      transition: 0.25s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
-    }
-
-    /* HERO */
-    .hero {
-      padding: 70px 0 50px;
-      background:
-        linear-gradient(90deg, rgba(252,248,248,1) 0%, rgba(252,248,248,0.96) 45%, rgba(246,228,231,0.9) 100%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 42px;
-      align-items: center;
+    .hero-content {
+      width: 600px;
+      max-width: 100%;
+      padding: 80px 0;
     }
 
     .hero-brand {
-      width: 250px;
+      width: 300px;
       margin-bottom: 28px;
     }
 
     .hero-brand img {
       width: 100%;
       height: auto;
+      display: block;
     }
 
     .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 6vw, 5.2rem);
-      line-height: 0.95;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(52px, 5vw, 75px);
+      line-height: .95;
       font-weight: 600;
       color: var(--brown);
-      margin-bottom: 24px;
-    }
-
-    .hero h1 .highlight {
-      color: var(--rose-dark);
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
       margin-bottom: 28px;
     }
 
-    .hero-actions {
+    .hero h1 span {
+      color: var(--rose);
+    }
+
+    .hero p {
+      font-size: 17px;
+      line-height: 1.65;
+      max-width: 540px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
       display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 28px;
-      border-radius: 999px;
-      border: 1.5px solid var(--rose-dark);
-      color: var(--rose-dark);
+    .button-outline {
+      display: inline-block;
+      padding: 14px 27px;
+      border-radius: 40px;
+      border: 1px solid var(--rose);
+      color: var(--rose);
+      font-size: 12px;
       font-weight: 700;
-      background: transparent;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background: rgba(255,255,255,.75);
     }
 
-    .hero-image {
-      position: relative;
-    }
 
-    .hero-image img {
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-      width: 100%;
-      min-height: 540px;
-      object-fit: cover;
-      border: 1px solid var(--border);
-    }
+    /* ==========================
+       TÍTULOS
+    ========================== */
 
-    /* SECTIONS */
     section {
-      padding: 80px 0;
+      scroll-margin-top: 90px;
+    }
+
+    .section {
+      padding: 95px 0;
+    }
+
+    .eyebrow {
+      color: var(--rose);
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2.3rem, 4vw, 3.4rem);
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 4vw, 58px);
       line-height: 1;
+      font-weight: 600;
       color: var(--brown);
-      margin-bottom: 16px;
-      text-align: center;
+      margin-bottom: 18px;
     }
 
-    .section-subtitle {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 42px;
-      color: #614847;
+    .section-intro {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 45px;
     }
 
-    .cards {
+
+    /* ==========================
+       SERVIÇOS
+    ========================== */
+
+    #servicos {
+      background: white;
+    }
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
-    .card {
-      background: var(--white);
+    .service-card {
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: var(--shadow);
+      border-radius: 18px;
+      padding: 28px 24px;
+      background: linear-gradient(145deg, white, #fff9f8);
+      min-height: 210px;
     }
 
-    .card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      line-height: 1;
+    .service-icon {
+      width: 55px;
+      height: 55px;
+      background: var(--rose-light);
+      color: var(--rose);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      font-family: "Cormorant Garamond", serif;
       color: var(--brown);
-      margin-bottom: 14px;
+      font-size: 27px;
+      line-height: 1;
+      margin-bottom: 12px;
     }
 
-    .card p {
-      color: #5d4746;
-      font-size: 0.98rem;
+    .service-card p {
+      color: var(--muted);
+      font-size: 14px;
     }
 
-    .about-grid,
-    .contact-grid {
+
+    /* ==========================
+       SOBRE
+    ========================== */
+
+    #sobre {
+      background: #fff7f5;
+    }
+
+    .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      align-items: start;
+      gap: 55px;
+      align-items: center;
     }
 
-    .about-box,
-    .contact-box,
-    .destination-box,
-    .vehicle-box {
-      background: var(--white);
+    .about-card {
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 30px;
-      box-shadow: var(--shadow);
     }
 
-    .about-box h3,
-    .contact-box h3,
-    .destination-box h3,
-    .vehicle-box h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: var(--brown);
-      margin-bottom: 12px;
+    .about-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 30px;
+      margin-bottom: 18px;
     }
 
-    .list {
-      display: grid;
-      gap: 10px;
+    .about-card ul {
       padding-left: 20px;
-      color: #5d4746;
     }
 
-    .vehicles-grid,
-    .destinations-grid {
+    .about-card li {
+      margin-bottom: 10px;
+    }
+
+
+    /* ==========================
+       VEÍCULOS
+    ========================== */
+
+    #veiculos {
+      background: white;
+    }
+
+    .vehicles-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
     }
 
-    .vehicle-tag {
-      display: inline-block;
-      background: var(--rose-light);
-      color: var(--rose-dark);
-      border-radius: 999px;
-      padding: 8px 14px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 16px;
+    .vehicle {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fffaf8;
     }
 
-    .contact-box p {
-      margin-bottom: 12px;
+    .vehicle-placeholder {
+      height: 260px;
+      background: linear-gradient(135deg,#fae6e5,#fff8f5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--rose);
+      font-weight: 600;
     }
 
-    .contact-box strong {
-      color: var(--brown);
+    .vehicle-content {
+      padding: 28px;
     }
+
+    .vehicle-content h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 31px;
+      margin-bottom: 10px;
+    }
+
+
+    /* ==========================
+       DESTINOS
+    ========================== */
+
+    #destinos {
+      background: #fff6f3;
+    }
+
+    .destination-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .destination {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 28px;
+    }
+
+    .destination h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 27px;
+      margin-bottom: 10px;
+    }
+
+    .destination p {
+      color: var(--muted);
+    }
+
+
+    /* ==========================
+       REGIÃO
+    ========================== */
+
+    .regions {
+      background:
+        linear-gradient(
+          rgba(255,244,241,.94),
+          rgba(255,244,241,.94)
+        );
+      text-align: center;
+    }
+
+    .regions .section-title {
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    /* ==========================
+       CONTATO
+    ========================== */
+
+    #contato {
+      background: var(--brown);
+      text-align: center;
+      color: white;
+    }
+
+    #contato .section-title {
+      color: white;
+    }
+
+    #contato p {
+      color: #f0e5e1;
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+
+    /* ==========================
+       RODAPÉ
+    ========================== */
 
     footer {
-      padding: 28px 0;
-      background: #f5eeee;
-      border-top: 1px solid var(--border);
-      text-align: center;
-      color: #6a5351;
-      font-size: 0.95rem;
+      background: #2d201d;
+      color: #eee1dd;
+      padding: 38px 0;
     }
 
-    /* RESPONSIVO */
-    @media (max-width: 980px) {
-      .hero-grid,
-      .cards,
-      .about-grid,
-      .contact-grid,
-      .vehicles-grid,
-      .destinations-grid {
-        grid-template-columns: 1fr;
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+    }
+
+    .footer-info {
+      text-align: right;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #dbc9c4;
+    }
+
+
+    /* ==========================
+       CELULAR
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px 0;
       }
 
-      .header-wrap {
-        flex-direction: column;
-      }
-
-      nav {
-        gap: 16px;
+      .nav-links {
+        display: none;
       }
 
       .hero {
-        padding-top: 50px;
+        min-height: 720px;
+
+        background-image:
+          linear-gradient(
+            rgba(255,250,248,.90),
+            rgba(255,250,248,.90)
+          ),
+          url("hero-bellaclass.jpg");
+
+        background-position: center;
       }
 
-      .hero-image img {
-        min-height: 320px;
+      .hero-content {
+        width: 100%;
+      }
+
+      .services-grid,
+      .destination-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid,
+      .vehicles-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-info {
+        text-align: center;
       }
     }
 
-    @media (max-width: 640px) {
+
+    @media (max-width: 600px) {
+
       .logo img {
-        height: 48px;
+        width: 190px;
       }
 
-      nav {
-        font-size: 0.84rem;
+      .nav > .button {
+        display: none;
+      }
+
+      .hero {
+        min-height: 660px;
+      }
+
+      .hero-brand {
+        width: 240px;
       }
 
       .hero h1 {
-        font-size: 3rem;
+        font-size: 48px;
       }
 
-      .hero p {
-        font-size: 1rem;
+      .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .btn,
-      .btn-outline {
-        width: 100%;
+      .services-grid,
+      .destination-grid {
+        grid-template-columns: 1fr;
       }
+
+      .section {
+        padding: 70px 0;
+      }
+
     }
+
   </style>
 </head>
+
+
 <body>
 
-  <header>
-    <div class="container header-wrap">
-      <a href="#inicio" class="logo">
-        <img src="logo-bellaclass.png" alt="BellaClass Transfer Executivo">
-      </a>
 
-      <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre nós</a>
-        <a href="#servicos">Nossos serviços</a>
-        <a href="#veiculos">Veículos</a>
-        <a href="#destinos">Destinos</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<header>
 
-      <a class="btn" href="https://wa.me/5519990209275?text=Olá! Gostaria de solicitar um orçamento." target="_blank">
-        Solicitar orçamento
-      </a>
+  <div class="container nav">
+
+    <a class="logo" href="#inicio">
+      <img src="logo-bellaclass.png"
+           alt="BellaClass Transfer Executivo">
+    </a>
+
+    <nav class="nav-links">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#servicos">Nossos serviços</a>
+      <a href="#veiculos">Veículos</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a class="button"
+       href="https://wa.me/5519990209275"
+       target="_blank">
+      Solicitar orçamento
+    </a>
+
+  </div>
+
+</header>
+
+
+
+<main>
+
+
+<section class="hero" id="inicio">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-brand">
+        <img src="logo-bellaclass.png"
+             alt="BellaClass Transfer Executivo">
+      </div>
+
+      <h1>
+        Transfer executivo pensado para
+        <span>mulheres, com atendimento feminino.</span>
+      </h1>
+
+      <p>
+        Uma experiência de mobilidade executiva criada para mulheres
+        que valorizam conforto, discrição e excelência em cada deslocamento.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a class="button"
+           href="https://wa.me/5519990209275"
+           target="_blank">
+          Solicitar orçamento
+        </a>
+
+        <a class="button-outline"
+           href="#servicos">
+          Ver serviços
+        </a>
+
+      </div>
+
     </div>
-  </header>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <div class="hero-brand">
-            <img src="logo-bellaclass.png" alt="BellaClass">
-          </div>
+  </div>
 
-          <h1>
-            Transfer executivo pensado para
-            <span class="highlight">mulheres, com atendimento feminino.</span>
-          </h1>
+</section>
+
+
+
+<section class="section" id="servicos">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Nossos serviços
+    </div>
+
+    <h2 class="section-title">
+      Mobilidade executiva para cada momento da sua agenda.
+    </h2>
+
+    <p class="section-intro">
+      Soluções personalizadas, com atendimento feminino,
+      para que você chegue ao seu destino com tranquilidade,
+      segurança e total discrição.
+    </p>
+
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">✈</div>
+        <h3>Aeroportos</h3>
+        <p>
+          Transfers para Viracopos, Guarulhos e Congonhas.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">▣</div>
+        <h3>Viagens</h3>
+        <p>
+          Viagens executivas e intermunicipais com
+          planejamento e conforto.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">☆</div>
+        <h3>Shows e Eventos</h3>
+        <p>
+          Transporte para shows, festas, casamentos
+          e eventos sociais ou corporativos.
+        </p>
+      </div>
+
+
+      <div class="service-card">
+        <div class="service-icon">♙</div>
+        <h3>Empresas</h3>
+        <p>
+          Soluções de transporte executivo para
+          profissionais, executivas, clientes e equipes.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section" id="sobre">
+
+  <div class="container about-grid">
+
+    <div>
+
+      <div class="eyebrow">
+        BellaClass
+      </div>
+
+      <h2 class="section-title">
+        Transporte executivo pensado nos detalhes.
+      </h2>
+
+      <p>
+        A BellaClass oferece uma experiência de mobilidade executiva
+        criada especialmente para mulheres, unindo conforto,
+        discrição, pontualidade e atendimento feminino.
+      </p>
+
+    </div>
+
+
+    <div class="about-card">
+
+      <h3>Diferenciais</h3>
+
+      <ul>
+        <li>Atendimento com motorista feminina</li>
+        <li>Segurança e identificação</li>
+        <li>Conforto e discrição</li>
+        <li>Atendimento personalizado</li>
+        <li>Orçamento conforme a necessidade de cada cliente</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section" id="veiculos">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Veículos
+    </div>
+
+    <h2 class="section-title">
+      Conforto para diferentes necessidades.
+    </h2>
+
+    <p class="section-intro">
+      Conheça os veículos disponíveis para os atendimentos BellaClass.
+    </p>
+
+
+    <div class="vehicles-grid">
+
+
+      <article class="vehicle">
+
+        <div class="vehicle-placeholder">
+          Foto do Toyota Corolla
+        </div>
+
+        <div class="vehicle-content">
+
+          <h3>
+            Toyota Corolla Altis Premium Hybrid
+          </h3>
 
           <p>
-            Uma experiência de mobilidade executiva criada para mulheres que valorizam conforto,
-            discrição, segurança e excelência em cada deslocamento.
+            Sedã executivo híbrido, ideal para aeroportos,
+            compromissos profissionais e viagens.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn" href="https://wa.me/5519990209275?text=Olá! Gostaria de solicitar um orçamento." target="_blank">
-              Solicitar orçamento
-            </a>
-            <a class="btn-outline" href="#servicos">Ver serviços</a>
-          </div>
         </div>
 
-        <div class="hero-image">
-          <img src="hero-bellaclass.jpg" alt="BellaClass Transfer Executivo">
+      </article>
+
+
+
+      <article class="vehicle">
+
+        <div class="vehicle-placeholder">
+          Foto do Volkswagen T-Cross
         </div>
-      </div>
-    </section>
 
-    <section id="sobre">
-      <div class="container">
-        <h2 class="section-title">Sobre a BellaClass</h2>
-        <p class="section-subtitle">
-          A BellaClass é um serviço de transfer executivo pensado especialmente para mulheres,
-          com atendimento feminino, proposta acolhedora e foco em conforto, discrição e confiança.
-        </p>
+        <div class="vehicle-content">
 
-        <div class="about-grid">
-          <div class="about-box">
-            <h3>Nossa proposta</h3>
-            <p>
-              Oferecer um transporte executivo feminino para deslocamentos pessoais e profissionais,
-              com atendimento atencioso, organização e cuidado em cada etapa do trajeto.
-            </p>
-          </div>
+          <h3>
+            Volkswagen T-Cross
+          </h3>
 
-          <div class="about-box">
-            <h3>Diferenciais</h3>
-            <ul class="list">
-              <li>Atendimento com motorista feminina</li>
-              <li>Conforto e discrição em cada deslocamento</li>
-              <li>Atendimento para aeroportos, eventos, empresas e viagens</li>
-              <li>Saídas em Indaiatuba, Campinas e região</li>
-              <li>Orçamentos personalizados conforme a necessidade</li>
-            </ul>
-          </div>
+          <p>
+            SUV confortável e versátil para deslocamentos,
+            eventos, compromissos e viagens.
+          </p>
+
         </div>
-      </div>
-    </section>
 
-    <section id="servicos">
-      <div class="container">
-        <h2 class="section-title">Nossos serviços</h2>
-        <p class="section-subtitle">
-          Conheça as principais soluções de transporte executivo feminino da BellaClass.
-        </p>
+      </article>
 
-        <div class="cards">
-          <div class="card">
-            <h3>Transfer Executivo para Mulheres</h3>
-            <p>Deslocamentos com conforto, discrição e atendimento feminino para compromissos pessoais e profissionais.</p>
-          </div>
 
-          <div class="card">
-            <h3>Transfer Aeroporto</h3>
-            <p>Atendimento para embarques e desembarques em Viracopos, Guarulhos e Congonhas.</p>
-          </div>
-
-          <div class="card">
-            <h3>Motorista Feminina à Disposição</h3>
-            <p>Atendimento por período, ideal para agendas com vários compromissos no mesmo dia.</p>
-          </div>
-
-          <div class="card">
-            <h3>Shows e Eventos</h3>
-            <p>Transporte executivo para eventos sociais, shows, festas, casamentos e ocasiões especiais.</p>
-          </div>
-
-          <div class="card">
-            <h3>Transporte Corporativo Executivo</h3>
-            <p>Atendimento para executivas, clientes, reuniões, visitas empresariais e demandas corporativas.</p>
-          </div>
-
-          <div class="card">
-            <h3>Viagens Executivas e Intermunicipais</h3>
-            <p>Deslocamentos entre cidades com organização, tranquilidade e atendimento personalizado.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="veiculos">
-      <div class="container">
-        <h2 class="section-title">Veículos disponíveis</h2>
-        <p class="section-subtitle">
-          Uma aba pensada para apresentar os veículos utilizados no atendimento da BellaClass.
-        </p>
-
-        <div class="vehicles-grid">
-          <div class="vehicle-box">
-            <span class="vehicle-tag">Disponível</span>
-            <h3>Volkswagen T-Cross</h3>
-            <p>
-              Veículo confortável e versátil, ideal para deslocamentos urbanos, executivos,
-              compromissos profissionais, eventos e viagens de curta ou média distância.
-            </p>
-          </div>
-
-          <div class="vehicle-box">
-            <span class="vehicle-tag">Disponível</span>
-            <h3>Toyota Corolla</h3>
-            <p>
-              Opção elegante e confortável para atendimentos executivos, transfers para aeroportos,
-              reuniões, hotéis e deslocamentos com maior sofisticação.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="destinos">
-      <div class="container">
-        <h2 class="section-title">Destinos atendidos</h2>
-        <p class="section-subtitle">
-          Essa aba mostra de forma organizada os principais aeroportos, cidades e rotas atendidas pela BellaClass.
-        </p>
-
-        <div class="destinations-grid">
-          <div class="destination-box">
-            <h3>Aeroportos</h3>
-            <ul class="list">
-              <li>Viracopos</li>
-              <li>Guarulhos</li>
-              <li>Congonhas</li>
-            </ul>
-          </div>
-
-          <div class="destination-box">
-            <h3>Cidades e regiões</h3>
-            <ul class="list">
-              <li>Indaiatuba</li>
-              <li>Campinas e região</li>
-              <li>São Paulo</li>
-              <li>São José dos Campos</li>
-              <li>Outras localidades sob consulta</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contato">
-      <div class="container">
-        <h2 class="section-title">Contato</h2>
-        <p class="section-subtitle">
-          Solicite seu orçamento com facilidade pelo WhatsApp.
-        </p>
-
-        <div class="contact-grid">
-          <div class="contact-box">
-            <h3>Como solicitar orçamento</h3>
-            <p>Para solicitar um orçamento, envie por gentileza:</p>
-            <ul class="list">
-              <li>Data e horário</li>
-              <li>Local de origem</li>
-              <li>Destino</li>
-              <li>Quantidade de passageiros</li>
-              <li>Quantidade de bagagens (se houver)</li>
-              <li>Serviço desejado</li>
-            </ul>
-          </div>
-
-          <div class="contact-box">
-            <h3>Fale com a BellaClass</h3>
-            <p><strong>Atendimento:</strong> Indaiatuba, Campinas e região, São Paulo e outras localidades sob consulta.</p>
-            <p><strong>WhatsApp:</strong> (19) 99020-9275</p>
-            <p><strong>Instagram:</strong> @bellaclass.transfer</p>
-            <p><strong>Site:</strong> bellaclasstransfer.com.br</p>
-            <br>
-            <a class="btn" href="https://wa.me/5519990209275?text=Olá! Gostaria de solicitar um orçamento." target="_blank">
-              Chamar no WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      BellaClass Transfer Executivo © 2026 — Todos os direitos reservados.
     </div>
-  </footer>
+
+  </div>
+
+</section>
+
+
+
+<section class="section" id="destinos">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Destinos
+    </div>
+
+    <h2 class="section-title">
+      Para onde a BellaClass pode levar você?
+    </h2>
+
+
+    <div class="destination-grid">
+
+
+      <div class="destination">
+        <h3>Aeroportos</h3>
+        <p>Viracopos, Guarulhos e Congonhas.</p>
+      </div>
+
+
+      <div class="destination">
+        <h3>Hotéis</h3>
+        <p>
+          Deslocamentos para hotéis e hospedagens.
+        </p>
+      </div>
+
+
+      <div class="destination">
+        <h3>Empresas</h3>
+        <p>
+          Reuniões, visitas empresariais
+          e compromissos corporativos.
+        </p>
+      </div>
+
+
+      <div class="destination">
+        <h3>Shows e Eventos</h3>
+        <p>
+          Shows, festivais, casamentos
+          e eventos sociais.
+        </p>
+      </div>
+
+
+      <div class="destination">
+        <h3>Hospitais e Clínicas</h3>
+        <p>
+          Deslocamentos previamente agendados
+          para consultas e procedimentos.
+        </p>
+      </div>
+
+
+      <div class="destination">
+        <h3>Viagens</h3>
+        <p>
+          São Paulo, São José dos Campos
+          e outras localidades sob consulta.
+        </p>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<section class="section regions">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Atendimento na região
+    </div>
+
+    <h2 class="section-title">
+      Indaiatuba, Campinas e Região, São Paulo
+    </h2>
+
+    <p>
+      Atendimento em outras localidades
+      mediante disponibilidade e programação prévia.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<section class="section" id="contato">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      BellaClass
+    </div>
+
+    <h2 class="section-title">
+      Solicite seu orçamento
+    </h2>
+
+    <p>
+      Entre em contato pelo WhatsApp para consultar
+      disponibilidade e receber um orçamento personalizado.
+    </p>
+
+    <a class="button"
+       href="https://wa.me/5519990209275"
+       target="_blank">
+      Solicitar orçamento pelo WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+
+
+</main>
+
+
+
+<footer>
+
+  <div class="container footer-content">
+
+    <div class="footer-brand">
+      BellaClass | Transfer Executivo
+    </div>
+
+
+    <div class="footer-info">
+
+      Instagram: @bellaclass.transfer<br>
+
+      WhatsApp: (19) 99020-9275<br>
+
+      bellaclasstransfer.com.br<br>
+
+      Indaiatuba • Campinas e Região • São Paulo
+
+    </div>
+
+  </div>
+
+</footer>
+
 
 </body>
+
 </html>
