@@ -23,7 +23,6 @@
     rel="stylesheet"
   >
 
-  <!-- Ícones das redes sociais -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -159,7 +158,7 @@
     }
 
     /* =========================================================
-       INÍCIO — NÃO ALTERADO
+       INÍCIO
     ========================================================= */
 
     .hero {
@@ -172,14 +171,16 @@
         linear-gradient(
           90deg,
           rgba(255,250,249,.98) 0%,
-          rgba(255,250,249,.92) 23%,
-          rgba(255,250,249,.60) 42%,
-          rgba(255,250,249,.05) 66%
+          rgba(255,250,249,.93) 23%,
+          rgba(255,250,249,.67) 40%,
+          rgba(255,250,249,.22) 58%,
+          rgba(255,250,249,.02) 76%
         ),
         url("hero-bellaclass.jpg");
 
       background-size: cover;
-      background-position: center;
+      background-position: right center;
+      background-repeat: no-repeat;
     }
 
     .hero-content {
@@ -195,7 +196,7 @@
     }
 
     .hero-copy {
-      width: min(560px, 48vw);
+      width: min(650px, 52vw);
     }
 
     .hero-brand {
@@ -205,18 +206,56 @@
 
     .hero h1 {
       font-family: "Cormorant Garamond", serif;
-      font-size: clamp(48px, 4.3vw, 72px);
-      line-height: .96;
+
+      font-size: clamp(50px, 4.2vw, 72px);
+      line-height: .98;
       font-weight: 600;
       letter-spacing: -.025em;
+
+      color: var(--brown);
+
+      max-width: 650px;
     }
 
     .hero h1 .pink {
       color: var(--rose);
     }
 
+    .hero-service-area {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      margin-top: 26px;
+
+      padding: 11px 20px;
+
+      background: rgba(255,255,255,.76);
+
+      border: 1px solid rgba(207,102,120,.55);
+      border-radius: 999px;
+
+      color: var(--brown);
+
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1.3;
+
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+
+      box-shadow: 0 5px 18px rgba(95,55,50,.05);
+    }
+
+    .hero-service-area i {
+      color: var(--rose);
+      font-size: 18px;
+      flex: 0 0 auto;
+    }
+
     .hero-description {
-      margin-top: 28px;
+      margin-top: 20px;
+
       max-width: 525px;
 
       font-size: 16px;
@@ -308,8 +347,7 @@
     }
 
     /* =========================================================
-       NOSSOS SERVIÇOS — CORRIGIDO
-       3 EM CIMA + 2 GRANDES EMBAIXO
+       NOSSOS SERVIÇOS
     ========================================================= */
 
     #servicos {
@@ -333,9 +371,7 @@
 
     .services-grid {
       display: grid;
-
       grid-template-columns: repeat(6, 1fr);
-
       gap: 20px;
     }
 
@@ -358,13 +394,11 @@
       transition: .2s ease;
     }
 
-    /* Empresas */
     .service-card:nth-child(4) {
       grid-column: 1 / span 3;
       margin-left: 14%;
     }
 
-    /* Motorista */
     .service-card:nth-child(5) {
       grid-column: 4 / span 3;
       margin-right: 14%;
@@ -409,7 +443,7 @@
     }
 
     /* =========================================================
-       VEÍCULOS — CORRIGIDO
+       VEÍCULOS
     ========================================================= */
 
     #veiculos {
@@ -452,11 +486,6 @@
       object-fit: cover;
       object-position: center;
     }
-
-    /*
-       FOTO MENOR:
-       fica apenas no canto inferior direito.
-    */
 
     .vehicle-inset {
       position: absolute;
@@ -501,7 +530,7 @@
     }
 
     /* =========================================================
-       DESTINOS — NÃO ALTERADO
+       DESTINOS
     ========================================================= */
 
     #destinos {
@@ -559,7 +588,7 @@
     }
 
     /* =========================================================
-       SOBRE NÓS — NÃO ALTERADO
+       SOBRE NÓS
     ========================================================= */
 
     #sobre {
@@ -636,7 +665,7 @@
     }
 
     /* =========================================================
-       CONTATO — RESTAURADO / CORRIGIDO
+       CONTATO
     ========================================================= */
 
     #contato {
@@ -645,12 +674,7 @@
 
     .contact-layout {
       display: grid;
-
-      /*
-        Dá mais espaço para os 3 cards das redes
-      */
       grid-template-columns: 56% 44%;
-
       min-height: 590px;
     }
 
@@ -796,12 +820,11 @@
     }
 
     /* =========================================================
-       RODAPÉ — ÍCONES CORRIGIDOS
+       RODAPÉ
     ========================================================= */
 
     .site-footer {
       background: #fff5f5;
-
       border-top: 1px solid #f1d7da;
     }
 
@@ -993,8 +1016,23 @@
         display: none;
       }
 
+      .hero {
+        background-position: 68% center;
+      }
+
       .hero-copy {
         width: 100%;
+      }
+
+      .hero-service-area {
+        border-radius: 18px;
+        padding: 10px 14px;
+        font-size: 13px;
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: clamp(44px, 11vw, 62px);
       }
 
       .services-heading {
@@ -1048,9 +1086,7 @@
 
       .footer-main {
         grid-template-columns: 1fr;
-
         text-align: center;
-
         padding: 40px 0;
       }
 
@@ -1060,6 +1096,19 @@
 
       .footer-social {
         justify-content: center;
+      }
+
+    }
+
+    @media (max-width: 520px) {
+
+      .hero-service-area {
+        width: 100%;
+        align-items: flex-start;
+      }
+
+      .hero h1 {
+        font-size: 46px;
       }
 
     }
@@ -1099,6 +1148,7 @@
     <a
       class="header-cta"
       target="_blank"
+      rel="noopener"
       href="https://wa.me/5519990209275?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20BellaClass%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
     >
       Solicitar orçamento
@@ -1122,28 +1172,41 @@
       <img
         class="hero-brand"
         src="logo-bellaclass.png"
-        alt="BellaClass"
+        alt="BellaClass Transfer Executivo"
       >
 
       <h1>
         Transfer executivo<br>
-        pensado para<br>
+        pensado para mulheres,<br>
         <span class="pink">
-          mulheres, com<br>
-          atendimento feminino.
+          com atendimento feminino.
         </span>
       </h1>
+
+
+      <div class="hero-service-area">
+
+        <i class="bi bi-geo-alt-fill"></i>
+
+        <span>
+          Atendimento em Indaiatuba • Campinas e Região • São Paulo
+        </span>
+
+      </div>
+
 
       <p class="hero-description">
         Uma experiência de mobilidade executiva criada para mulheres
         que valorizam conforto, discrição e excelência em cada deslocamento.
       </p>
 
+
       <div class="hero-actions">
 
         <a
           class="btn btn-primary"
           target="_blank"
+          rel="noopener"
           href="https://wa.me/5519990209275?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20BellaClass%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
         >
           Solicitar orçamento
@@ -1200,7 +1263,7 @@
 
         <p>
           Atendimento para embarques e desembarques em Viracopos (VCP),
-          Guarulhos (GRU) e Congonhas (CGH) com acompanhamento do voo.
+          Guarulhos (GRU) e Congonhas (CGH), com acompanhamento do voo.
         </p>
 
       </article>
@@ -1644,6 +1707,7 @@
       <a
         class="contact-button"
         target="_blank"
+        rel="noopener"
         href="https://wa.me/5519990209275?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20BellaClass%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
       >
         <i class="bi bi-whatsapp"></i>
@@ -1657,6 +1721,7 @@
         <a
           class="social-card"
           target="_blank"
+          rel="noopener"
           href="https://www.instagram.com/bellaclass.transfer"
         >
 
@@ -1675,6 +1740,7 @@
         <a
           class="social-card"
           target="_blank"
+          rel="noopener"
           href="https://www.facebook.com/bellaclass.transfer"
         >
 
@@ -1693,6 +1759,7 @@
         <a
           class="social-card"
           target="_blank"
+          rel="noopener"
           href="https://www.linkedin.com/company/bellaclasstransfer/"
         >
 
@@ -1748,6 +1815,7 @@
       <a
         href="https://www.instagram.com/bellaclass.transfer"
         target="_blank"
+        rel="noopener"
         aria-label="Instagram"
       >
         <i class="bi bi-instagram"></i>
@@ -1756,6 +1824,7 @@
       <a
         href="https://www.facebook.com/bellaclass.transfer"
         target="_blank"
+        rel="noopener"
         aria-label="Facebook"
       >
         <i class="bi bi-facebook"></i>
@@ -1764,6 +1833,7 @@
       <a
         href="https://www.linkedin.com/company/bellaclasstransfer/"
         target="_blank"
+        rel="noopener"
         aria-label="LinkedIn"
       >
         <i class="bi bi-linkedin"></i>
@@ -1772,6 +1842,7 @@
       <a
         href="https://wa.me/5519990209275?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20BellaClass%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
         target="_blank"
+        rel="noopener"
         aria-label="WhatsApp"
       >
         <i class="bi bi-whatsapp"></i>
@@ -1807,6 +1878,7 @@
 <a
   class="whatsapp-floating"
   target="_blank"
+  rel="noopener"
   href="https://wa.me/5519990209275?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20BellaClass%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
   aria-label="WhatsApp BellaClass"
 >
