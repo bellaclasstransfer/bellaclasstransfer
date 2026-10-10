@@ -178,8 +178,8 @@
         ),
         url("hero-bellaclass.jpg");
 
-      background-size: cover;
-      background-position: right center;
+      background-size: cover, auto 100%;
+      background-position: center, right top;
       background-repeat: no-repeat;
     }
 
@@ -530,61 +530,181 @@
     }
 
     /* =========================================================
-       DESTINOS
+       DESTINOS / REGIÕES ATENDIDAS
     ========================================================= */
 
     #destinos {
-      background: #fff;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background: #fffafa;
     }
 
-    .destinations-grid {
-      margin-top: 46px;
+    #destinos::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      background-image:
+        linear-gradient(
+          90deg,
+          rgba(255,250,249,1) 0%,
+          rgba(255,250,249,.98) 42%,
+          rgba(255,250,249,.88) 58%,
+          rgba(255,250,249,.46) 74%,
+          rgba(255,250,249,.08) 100%
+        ),
+        url("hero-bellaclass.jpg");
+
+      background-size: cover, auto 100%;
+      background-position: center, right top;
+      background-repeat: no-repeat;
     }
 
-    .destination-card {
-      border: 1px solid var(--line);
-      border-radius: 24px;
-
-      min-height: 250px;
-
-      padding: 28px;
-
-      background: #fff;
-    }
-
-    .destination-icon {
-      width: 57px;
-      height: 57px;
-
+    #destinos::after {
+      content: "";
+      position: absolute;
+      right: -170px;
+      bottom: -340px;
+      width: 760px;
+      height: 760px;
+      z-index: -1;
+      border: 1px solid rgba(207,102,120,.22);
       border-radius: 50%;
+      pointer-events: none;
+    }
 
+    .destinations-shell {
+      position: relative;
+    }
+
+    .destinations-intro {
+      max-width: 900px;
+    }
+
+    .destinations-intro .eyebrow {
+      margin-bottom: 18px;
+    }
+
+    .destinations-title {
+      max-width: 900px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 4.7vw, 76px);
+      line-height: .98;
+      font-weight: 600;
+      letter-spacing: -.025em;
+      color: var(--brown);
+    }
+
+    .destinations-title em {
+      color: var(--rose-dark);
+      font-weight: 500;
+    }
+
+    .destinations-description {
+      max-width: 850px;
+      margin-top: 22px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--brown);
+    }
+
+    .destinations-route {
+      margin-top: 48px;
+      max-width: 1090px;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+      align-items: start;
+    }
+
+    .route-stop {
+      position: relative;
+      padding: 0 18px;
+      text-align: center;
+    }
+
+    .route-stop:first-child {
+      padding-left: 0;
+    }
+
+    .route-stop:last-child {
+      padding-right: 0;
+    }
+
+    .route-stop:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 27px;
+      left: calc(50% + 36px);
+      width: calc(100% - 72px);
+      height: 20px;
+      border-top: 1px solid rgba(207,102,120,.48);
+      border-radius: 50%;
+    }
+
+    .route-icon {
+      position: relative;
+      z-index: 2;
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 17px;
       display: flex;
       align-items: center;
       justify-content: center;
-
-      background: #f8dfe3;
+      border-radius: 50%;
+      background: rgba(248,223,227,.9);
       color: var(--rose-dark);
-
-      font-size: 25px;
-
-      margin-bottom: 17px;
+      border: 1px solid rgba(207,102,120,.22);
+      font-size: 24px;
+      box-shadow: 0 8px 22px rgba(100,59,54,.05);
+      backdrop-filter: blur(4px);
     }
 
-    .destination-card h3 {
+    .route-stop h3 {
       font-family: "Cormorant Garamond", serif;
-
-      font-size: 29px;
-      margin-bottom: 12px;
+      font-size: 25px;
+      line-height: 1.04;
+      font-weight: 600;
+      margin-bottom: 9px;
+      color: var(--brown);
     }
 
-    .destination-card p {
-      font-size: 14.5px;
-      line-height: 1.68;
+    .route-stop p {
+      max-width: 190px;
+      margin: 0 auto;
+      font-size: 13px;
+      line-height: 1.55;
       color: var(--brown-soft);
+    }
+
+    .destinations-note {
+      margin-top: 42px;
+      max-width: 850px;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 18px 22px;
+      border-radius: 18px;
+      border: 1px solid rgba(207,102,120,.15);
+      background: rgba(255,248,248,.82);
+      backdrop-filter: blur(7px);
+      box-shadow: 0 10px 28px rgba(88,49,45,.04);
+    }
+
+    .destinations-note i {
+      color: var(--rose-dark);
+      font-size: 26px;
+      flex: 0 0 auto;
+    }
+
+    .destinations-note p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      line-height: 1.35;
+      color: var(--brown);
     }
 
     /* =========================================================
@@ -968,8 +1088,14 @@
         justify-self: center;
       }
 
-      .destinations-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .destinations-route {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px 0;
+      }
+
+      .route-stop:nth-child(3)::after,
+      .route-stop:last-child::after {
+        display: none;
       }
 
       .social-cards {
@@ -1017,7 +1143,8 @@
       }
 
       .hero {
-        background-position: 68% center;
+        background-size: cover, auto 100%;
+        background-position: center, 72% top;
       }
 
       .hero-copy {
@@ -1045,9 +1172,65 @@
 
       .services-grid,
       .vehicles-grid,
-      .destinations-grid,
       .about-grid {
         grid-template-columns: 1fr;
+      }
+
+      #destinos::before {
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(255,250,249,.99) 0%,
+            rgba(255,250,249,.97) 58%,
+            rgba(255,250,249,.80) 100%
+          ),
+          url("hero-bellaclass.jpg");
+
+        background-size: cover, auto 100%;
+        background-position: center, 66% top;
+      }
+
+      .destinations-route {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 620px;
+      }
+
+      .route-stop,
+      .route-stop:first-child,
+      .route-stop:last-child {
+        padding: 0;
+
+        display: grid;
+
+        grid-template-columns: 58px 1fr;
+        grid-template-rows: auto auto;
+
+        column-gap: 16px;
+
+        text-align: left;
+      }
+
+      .route-stop::after {
+        display: none !important;
+      }
+
+      .route-icon {
+        grid-row: 1 / span 2;
+        margin: 0;
+      }
+
+      .route-stop h3 {
+        margin: 2px 0 4px;
+      }
+
+      .route-stop p {
+        max-width: none;
+        margin: 0;
+      }
+
+      .destinations-note {
+        max-width: 620px;
       }
 
       .service-card,
@@ -1183,7 +1366,6 @@
         </span>
       </h1>
 
-
       <div class="hero-service-area">
 
         <i class="bi bi-geo-alt-fill"></i>
@@ -1194,12 +1376,10 @@
 
       </div>
 
-
       <p class="hero-description">
         Uma experiência de mobilidade executiva criada para mulheres
         que valorizam conforto, discrição e excelência em cada deslocamento.
       </p>
-
 
       <div class="hero-actions">
 
@@ -1268,7 +1448,6 @@
 
       </article>
 
-
       <article class="service-card">
 
         <div class="service-icon">▣</div>
@@ -1282,7 +1461,6 @@
         </p>
 
       </article>
-
 
       <article class="service-card">
 
@@ -1298,7 +1476,6 @@
 
       </article>
 
-
       <article class="service-card">
 
         <div class="service-icon">⌂</div>
@@ -1313,7 +1490,6 @@
         </p>
 
       </article>
-
 
       <article class="service-card">
 
@@ -1394,7 +1570,6 @@
 
       </article>
 
-
       <article class="vehicle-card">
 
         <div class="vehicle-media">
@@ -1437,113 +1612,93 @@
 
 
 <!-- =======================================================
-     DESTINOS
+     DESTINOS / REGIÕES ATENDIDAS
 ======================================================== -->
 
 <section class="section" id="destinos">
 
-  <div class="container">
+  <div class="container destinations-shell">
 
-    <span class="eyebrow">
-      Destinos
-    </span>
+    <div class="destinations-intro">
 
-    <h2 class="section-title">
-      Atendimento para diferentes momentos da sua agenda.
-    </h2>
+      <span class="eyebrow">
+        Entre cidades, compromissos e destinos
+      </span>
 
-    <p class="section-subtitle">
-      Deslocamentos planejados conforme a necessidade de cada atendimento,
-      com conforto, discrição e cuidado em todo o percurso.
-    </p>
+      <h2 class="destinations-title">
+        Onde sua agenda levar,<br>
+        a <em>BellaClass</em> acompanha.
+      </h2>
 
-    <div class="destinations-grid">
+      <p class="destinations-description">
+        Atendimento em Indaiatuba, Campinas, Região Metropolitana de Campinas,
+        Grande São Paulo e Capital, além de outras cidades do Estado de São Paulo
+        sob consulta.
+      </p>
 
-      <article class="destination-card">
+    </div>
 
-        <div class="destination-icon">✈</div>
+    <div class="destinations-route">
 
-        <h3>Aeroportos</h3>
-
-        <p>
-          Atendimento para embarques e desembarques em Viracopos (VCP),
-          Guarulhos (GRU) e Congonhas (CGH), com planejamento,
-          pontualidade e conforto.
-        </p>
-
+      <article class="route-stop">
+        <div class="route-icon">
+          <i class="bi bi-house-heart-fill"></i>
+        </div>
+        <h3>Indaiatuba</h3>
+        <p>Base de atendimento da BellaClass.</p>
       </article>
 
-
-      <article class="destination-card">
-
-        <div class="destination-icon">▦</div>
-
-        <h3>Hotéis</h3>
-
+      <article class="route-stop">
+        <div class="route-icon">
+          <i class="bi bi-buildings-fill"></i>
+        </div>
+        <h3>Campinas</h3>
         <p>
-          Deslocamentos para hotéis e hospedagens, ideais para compromissos
-          profissionais, viagens, eventos e estadias com atendimento programado.
+          Compromissos profissionais, eventos, aeroportos
+          e deslocamentos previamente organizados.
         </p>
-
       </article>
 
-
-      <article class="destination-card">
-
-        <div class="destination-icon">▥</div>
-
-        <h3>Empresas e Centros Corporativos</h3>
-
+      <article class="route-stop">
+        <div class="route-icon">
+          <i class="bi bi-signpost-split-fill"></i>
+        </div>
+        <h3>Região Metropolitana de Campinas</h3>
         <p>
-          Transporte para reuniões, visitas empresariais, compromissos
-          profissionais, escritórios e centros corporativos, com
-          discrição e pontualidade.
+          Atendimento entre cidades da região, conforme agendamento.
         </p>
-
       </article>
 
-
-      <article class="destination-card">
-
-        <div class="destination-icon">★</div>
-
-        <h3>Shows e Eventos</h3>
-
+      <article class="route-stop">
+        <div class="route-icon">
+          <i class="bi bi-buildings"></i>
+        </div>
+        <h3>Grande São Paulo e Capital</h3>
         <p>
-          Atendimento para casas de show, festivais, festas, casamentos
-          e eventos sociais ou corporativos, com deslocamento previamente organizado.
+          Deslocamentos para compromissos, eventos, aeroportos e viagens.
         </p>
-
       </article>
 
-
-      <article class="destination-card">
-
-        <div class="destination-icon">✚</div>
-
-        <h3>Hospitais e Clínicas</h3>
-
+      <article class="route-stop">
+        <div class="route-icon">
+          <i class="bi bi-geo-alt-fill"></i>
+        </div>
+        <h3>Estado de São Paulo</h3>
         <p>
-          Deslocamentos agendados para consultas, exames, procedimentos
-          e demais compromissos de saúde, com conforto, cuidado e discrição.
+          Outras localidades atendidas sob consulta.
         </p>
-
       </article>
 
+    </div>
 
-      <article class="destination-card">
+    <div class="destinations-note">
 
-        <div class="destination-icon">⌖</div>
+      <i class="bi bi-calendar2-check"></i>
 
-        <h3>Viagens Intermunicipais</h3>
-
-        <p>
-          Deslocamentos entre Indaiatuba, Campinas e Região e São Paulo,
-          além de outras localidades sob consulta, com planejamento
-          e atendimento personalizado durante todo o percurso.
-        </p>
-
-      </article>
+      <p>
+        Cada trajeto é planejado de acordo com sua origem, destino,
+        horário e necessidade.
+      </p>
 
     </div>
 
@@ -1598,7 +1753,6 @@
 
       </article>
 
-
       <article class="about-card">
 
         <div class="about-top">
@@ -1617,7 +1771,6 @@
 
       </article>
 
-
       <article class="about-card">
 
         <div class="about-top">
@@ -1634,7 +1787,6 @@
         </p>
 
       </article>
-
 
       <article class="about-card">
 
@@ -1653,7 +1805,6 @@
         </p>
 
       </article>
-
 
       <article class="about-card">
 
@@ -1715,7 +1866,6 @@
         <i class="bi bi-arrow-right"></i>
       </a>
 
-
       <div class="social-cards">
 
         <a
@@ -1736,7 +1886,6 @@
 
         </a>
 
-
         <a
           class="social-card"
           target="_blank"
@@ -1754,7 +1903,6 @@
           </div>
 
         </a>
-
 
         <a
           class="social-card"
@@ -1777,7 +1925,6 @@
       </div>
 
     </div>
-
 
     <div class="contact-image"></div>
 
@@ -1803,12 +1950,10 @@
 
     </div>
 
-
     <div class="footer-tagline">
       Mais que um destino,<br>
       uma experiência.
     </div>
-
 
     <div class="footer-social">
 
@@ -1850,7 +1995,6 @@
 
     </div>
 
-
     <div class="footer-contact">
 
       <div>
@@ -1866,7 +2010,6 @@
     </div>
 
   </div>
-
 
   <div class="footer-bottom">
     BellaClass Transfer Executivo © 2026 — Todos os direitos reservados.
@@ -1916,4 +2059,3 @@
 
 </body>
 </html>
-
