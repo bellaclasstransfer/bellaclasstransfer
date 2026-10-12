@@ -17,7 +17,6 @@
     }
 
     gtag('js', new Date());
-
     gtag('config', 'AW-18507495175');
   </script>
 
@@ -25,11 +24,9 @@
     function gtag_report_conversion(url) {
 
       var callback = function () {
-
-        if (typeof(url) != 'undefined') {
+        if (typeof url !== 'undefined') {
           window.location = url;
         }
-
       };
 
       gtag('event', 'conversion', {
@@ -40,7 +37,6 @@
       });
 
       return false;
-
     }
   </script>
 
@@ -56,18 +52,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Transporte Executivo Feminino em Indaiatuba e Campinas | BellaClass
-  </title>
+  <title>Transporte Executivo Feminino em Indaiatuba e Campinas | BellaClass</title>
 
   <meta
     name="description"
-    content="Transporte executivo feminino em Indaiatuba, Campinas e região. Motorista feminina para viagens, aeroportos, eventos, compromissos e motorista à disposição. Conheça a BellaClass."
-  >
-
-  <meta
-    name="keywords"
-    content="transporte executivo feminino, motorista feminina, motorista particular feminina, transporte para mulheres, motorista feminina Indaiatuba, motorista feminina Campinas, transporte executivo Indaiatuba, transporte executivo Campinas, transfer feminino"
+    content="Transporte executivo feminino em Indaiatuba, Campinas e região. Motorista feminina para viagens, aeroportos, eventos, compromissos e motorista à disposição."
   >
 
   <meta
@@ -112,7 +101,7 @@
 
 
   <!-- =========================================================
-       FONTES / ÍCONES
+       FONTES E ÍCONES
   ========================================================== -->
 
   <link
@@ -152,8 +141,9 @@
         "url": "https://bellaclasstransfer.com.br/",
         "telephone": "+55-19-99020-9275",
         "description": "Transporte executivo pensado para mulheres, com atendimento feminino.",
-        "image": "https://bellaclasstransfer.com.br/hero-bellaclass.jpg",
         "logo": "https://bellaclasstransfer.com.br/logo-bellaclass.png",
+        "image": "https://bellaclasstransfer.com.br/hero-bellaclass.jpg",
+
         "areaServed": [
           {
             "@type": "City",
@@ -176,70 +166,67 @@
             "name": "Estado de São Paulo"
           }
         ],
+
         "sameAs": [
           "https://www.instagram.com/bellaclass.transfer",
           "https://www.facebook.com/bellaclass.transfer",
           "https://www.linkedin.com/company/bellaclasstransfer/"
         ]
       },
+
       {
         "@type": "Service",
         "@id": "https://bellaclasstransfer.com.br/transporte-executivo-feminino/#service",
+
         "name": "Transporte Executivo Feminino",
+
         "serviceType": "Transporte executivo feminino",
+
         "provider": {
           "@id": "https://bellaclasstransfer.com.br/#business"
         },
+
+        "description": "Transporte executivo para mulheres com atendimento feminino para viagens, aeroportos, eventos, compromissos e motorista à disposição.",
+
         "areaServed": [
           "Indaiatuba",
           "Campinas",
           "Região Metropolitana de Campinas",
-          "Grande São Paulo",
+          "São Paulo",
           "Estado de São Paulo"
-        ],
-        "description": "Transporte executivo para mulheres com atendimento feminino, incluindo viagens, aeroportos, eventos, compromissos e motorista à disposição."
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://bellaclasstransfer.com.br/transporte-executivo-feminino/#webpage",
-        "url": "https://bellaclasstransfer.com.br/transporte-executivo-feminino/",
-        "name": "Transporte Executivo Feminino em Indaiatuba e Campinas | BellaClass",
-        "about": {
-          "@id": "https://bellaclasstransfer.com.br/transporte-executivo-feminino/#service"
-        }
+        ]
       }
     ]
   }
   </script>
 
 
+
   <style>
 
     /* =========================================================
-       CONFIGURAÇÕES
+       CONFIGURAÇÕES GERAIS
     ========================================================== */
 
     :root {
 
-      --rose: #d56f78;
+      --rose: #d46974;
       --rose-dark: #bd5966;
-      --rose-soft: #e7a99f;
 
-      --peach: #e6ab96;
-      --peach-light: #f7ded5;
+      --peach: #e8a98e;
+      --peach-light: #f4cabc;
 
-      --brown: #3b2521;
-      --brown-soft: #705c57;
+      --brown: #39241f;
+      --brown-soft: #725e58;
 
       --cream: #fffaf7;
-      --cream-dark: #f9f0eb;
-
-      --black: #090909;
-      --black-soft: #111111;
+      --cream2: #fdf5f1;
 
       --white: #ffffff;
 
-      --line: #eed8d3;
+      --black: #080808;
+
+      --border: #ead9d2;
 
       --container: 1240px;
 
@@ -264,9 +251,9 @@
 
       font-family: "Montserrat", sans-serif;
 
-      color: var(--brown);
-
       background: var(--cream);
+
+      color: var(--brown);
 
       overflow-x: hidden;
 
@@ -280,8 +267,8 @@
 
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
 
@@ -292,7 +279,7 @@
         calc(100% - 56px)
       );
 
-      margin: 0 auto;
+      margin: auto;
 
     }
 
@@ -301,7 +288,7 @@
 
       display: block;
 
-      color: var(--rose-dark);
+      color: var(--rose);
 
       font-size: 12px;
 
@@ -311,7 +298,7 @@
 
       text-transform: uppercase;
 
-      margin-bottom: 11px;
+      margin-bottom: 10px;
 
     }
 
@@ -320,13 +307,14 @@
 
       font-family: "Cormorant Garamond", serif;
 
-      font-size: clamp(42px, 4vw, 62px);
+      font-size: clamp(41px, 4vw, 61px);
 
       line-height: .98;
 
       font-weight: 600;
 
     }
+
 
 
     /* =========================================================
@@ -337,7 +325,7 @@
 
       height: var(--header-height);
 
-      background: #070707;
+      background: #080808;
 
       color: #fff;
 
@@ -345,29 +333,27 @@
 
       top: 0;
 
-      z-index: 1000;
-
-      border-bottom: 1px solid rgba(255,255,255,.08);
+      z-index: 999;
 
     }
 
 
     .header-inner {
 
+      height: 100%;
+
       width: min(
         var(--container),
         calc(100% - 56px)
       );
 
-      height: 100%;
-
-      margin: 0 auto;
+      margin: auto;
 
       display: flex;
 
       align-items: center;
 
-      gap: 32px;
+      gap: 30px;
 
     }
 
@@ -387,9 +373,9 @@
 
       display: flex;
 
-      gap: 29px;
-
       align-items: center;
+
+      gap: 29px;
 
     }
 
@@ -400,11 +386,9 @@
 
       font-weight: 500;
 
-      color: rgba(255,255,255,.9);
+      color: rgba(255,255,255,.92);
 
       white-space: nowrap;
-
-      transition: .2s;
 
     }
 
@@ -418,15 +402,15 @@
 
       min-height: 43px;
 
-      padding: 0 22px;
-
-      border-radius: 999px;
+      padding: 0 24px;
 
       display: inline-flex;
 
       align-items: center;
 
       gap: 8px;
+
+      border-radius: 999px;
 
       background: var(--peach);
 
@@ -443,19 +427,20 @@
 
       display: none;
 
-      margin-left: auto;
-
-      border: 0;
-
-      background: none;
-
       color: white;
 
       font-size: 27px;
 
+      border: 0;
+
+      background: transparent;
+
+      margin-left: auto;
+
       cursor: pointer;
 
     }
+
 
 
     /* =========================================================
@@ -464,27 +449,23 @@
 
     .hero {
 
-      position: relative;
-
       min-height: 610px;
 
       display: flex;
 
       align-items: center;
 
-      color: #fff;
-
-      overflow: hidden;
+      color: white;
 
       background:
 
         linear-gradient(
           90deg,
-          rgba(0,0,0,.96) 0%,
-          rgba(0,0,0,.88) 26%,
-          rgba(0,0,0,.62) 49%,
-          rgba(0,0,0,.18) 72%,
-          rgba(0,0,0,.08) 100%
+          rgba(5,5,5,.97) 0%,
+          rgba(5,5,5,.91) 25%,
+          rgba(5,5,5,.68) 48%,
+          rgba(5,5,5,.18) 73%,
+          rgba(5,5,5,.04) 100%
         ),
 
         url("/hero-bellaclass.jpg");
@@ -503,7 +484,7 @@
         calc(100% - 56px)
       );
 
-      margin: 0 auto;
+      margin: auto;
 
       padding: 85px 0 65px;
 
@@ -511,7 +492,7 @@
 
 
     .hero-copy {
-      max-width: 660px;
+      max-width: 650px;
     }
 
 
@@ -521,9 +502,9 @@
 
       font-size: 12px;
 
-      letter-spacing: .19em;
-
       font-weight: 700;
+
+      letter-spacing: .19em;
 
       text-transform: uppercase;
 
@@ -542,8 +523,6 @@
 
       font-weight: 600;
 
-      letter-spacing: -.025em;
-
     }
 
 
@@ -558,45 +537,43 @@
 
     .hero-description {
 
-      max-width: 575px;
-
       margin-top: 20px;
+
+      max-width: 570px;
 
       font-size: 18px;
 
       line-height: 1.55;
-
-      color: rgba(255,255,255,.94);
 
     }
 
 
     .hero-actions {
 
-      margin-top: 28px;
-
       display: flex;
+
+      flex-wrap: wrap;
 
       gap: 14px;
 
-      flex-wrap: wrap;
+      margin-top: 29px;
 
     }
 
 
     .hero-btn {
 
-      min-height: 51px;
+      min-height: 50px;
 
-      padding: 0 28px;
+      padding: 0 27px;
+
+      border-radius: 999px;
 
       display: inline-flex;
 
       align-items: center;
 
       gap: 9px;
-
-      border-radius: 999px;
 
       font-size: 13px;
 
@@ -616,24 +593,22 @@
 
     .hero-btn.secondary {
 
-      border: 1px solid rgba(255,255,255,.72);
+      border: 1px solid rgba(255,255,255,.75);
 
-      color: white;
-
-      background: rgba(0,0,0,.1);
+      background: rgba(0,0,0,.18);
 
     }
 
 
     .hero-locations {
 
-      margin-top: 29px;
-
       display: flex;
 
       align-items: center;
 
-      gap: 10px;
+      gap: 8px;
+
+      margin-top: 29px;
 
       font-size: 14px;
 
@@ -647,13 +622,14 @@
     }
 
 
+
     /* =========================================================
        EXPERIÊNCIA
     ========================================================== */
 
     .experience {
 
-      padding: 72px 0;
+      padding: 72px 0 54px;
 
       background: var(--cream);
 
@@ -675,46 +651,41 @@
 
     .experience-image {
 
-      min-height: 400px;
+      min-height: 395px;
 
-      border-radius: 22px;
-
-      overflow: hidden;
+      border-radius: 20px;
 
       background:
-
         url("/corolla-vcp.jpg")
         center / cover no-repeat;
-
-      box-shadow: 0 20px 55px rgba(69,40,31,.1);
 
     }
 
 
     .experience-copy p {
 
-      margin-top: 19px;
+      max-width: 650px;
 
-      font-size: 16px;
+      margin-top: 17px;
+
+      font-size: 15px;
 
       line-height: 1.68;
 
       color: var(--brown-soft);
-
-      max-width: 650px;
 
     }
 
 
     .quality-icons {
 
-      margin-top: 35px;
+      margin-top: 32px;
 
       display: grid;
 
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4,1fr);
 
-      gap: 20px;
+      gap: 15px;
 
     }
 
@@ -734,15 +705,16 @@
 
     .quality-item i {
 
-      color: var(--rose);
-
       display: block;
 
-      font-size: 31px;
+      color: var(--rose);
 
-      margin-bottom: 8px;
+      font-size: 30px;
+
+      margin-bottom: 7px;
 
     }
+
 
 
     /* =========================================================
@@ -751,7 +723,7 @@
 
     .services {
 
-      padding: 34px 0 78px;
+      padding: 35px 0 75px;
 
       background: var(--cream);
 
@@ -762,7 +734,7 @@
 
       text-align: center;
 
-      margin-bottom: 38px;
+      margin-bottom: 37px;
 
     }
 
@@ -771,7 +743,7 @@
 
       display: grid;
 
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(5,1fr);
 
       gap: 16px;
 
@@ -780,21 +752,19 @@
 
     .service-card {
 
+      min-height: 385px;
+
       display: flex;
 
       flex-direction: column;
 
-      min-height: 390px;
-
-      border-radius: 17px;
-
       overflow: hidden;
 
-      background: #fff;
+      background: white;
 
-      border: 1px solid #eee1dc;
+      border: 1px solid #eadbd5;
 
-      box-shadow: 0 11px 30px rgba(70,40,30,.04);
+      border-radius: 17px;
 
     }
 
@@ -803,32 +773,20 @@
 
       height: 142px;
 
-      background-size: cover;
-
       background-position: center;
+
+      background-size: cover;
 
     }
 
 
     .airport-image {
-
-      background-image:
-
-        linear-gradient(
-          rgba(10,10,10,.03),
-          rgba(10,10,10,.03)
-        ),
-
-        url("/hero-bellaclass.jpg");
-
+      background-image: url("/hero-bellaclass.jpg");
     }
 
 
     .travel-image {
-
-      background-image:
-        url("/corolla-gru.jpg");
-
+      background-image: url("/corolla-gru.jpg");
     }
 
 
@@ -837,44 +795,43 @@
       background-image:
 
         linear-gradient(
-          rgba(20,0,0,.06),
-          rgba(20,0,0,.06)
+          rgba(0,0,0,.18),
+          rgba(0,0,0,.18)
         ),
 
         url("/hero-bellaclass.jpg");
-
-      filter: saturate(.85);
 
     }
 
 
     .corporate-image {
-
-      background-image:
-        url("/tcross-interior.jpg");
-
+      background-image: url("/tcross-interior.jpg");
     }
 
 
     .driver-image {
 
       background-image:
-        url("/tcross-interior.jpg");
 
-      filter: brightness(.6);
+        linear-gradient(
+          rgba(0,0,0,.32),
+          rgba(0,0,0,.32)
+        ),
+
+        url("/tcross-interior.jpg");
 
     }
 
 
     .service-content {
 
-      padding: 19px 18px 18px;
+      flex: 1;
 
       display: flex;
 
       flex-direction: column;
 
-      flex-grow: 1;
+      padding: 18px;
 
     }
 
@@ -883,20 +840,20 @@
 
       font-family: "Cormorant Garamond", serif;
 
-      font-size: 26px;
+      font-size: 25px;
 
-      line-height: 1.01;
+      line-height: 1;
 
     }
 
 
     .service-content p {
 
-      margin-top: 10px;
+      margin-top: 9px;
 
       font-size: 13px;
 
-      line-height: 1.55;
+      line-height: 1.48;
 
       color: var(--brown-soft);
 
@@ -909,24 +866,21 @@
 
       padding-top: 17px;
 
-      display: inline-flex;
-
-      align-items: center;
-
-      gap: 7px;
-
-      color: var(--brown);
+      font-size: 13px;
 
       font-weight: 700;
-
-      font-size: 13px;
 
     }
 
 
     .service-link span {
+
+      margin-left: 5px;
+
       color: var(--rose);
+
     }
+
 
 
     /* =========================================================
@@ -935,7 +889,7 @@
 
     .safety {
 
-      min-height: 310px;
+      min-height: 300px;
 
       display: grid;
 
@@ -950,30 +904,27 @@
 
     .safety-image {
 
-      min-height: 310px;
+      min-height: 300px;
 
       background:
 
         linear-gradient(
-          rgba(0,0,0,.35),
-          rgba(0,0,0,.35)
+          rgba(0,0,0,.36),
+          rgba(0,0,0,.36)
         ),
 
         url("/corolla-vcp.jpg");
 
       background-size: cover;
 
-      background-position: center 55%;
+      background-position: center;
 
     }
 
 
     .safety-content {
 
-      padding: 56px max(
-        40px,
-        calc((100vw - var(--container)) / 2)
-      ) 50px 55px;
+      padding: 52px 55px;
 
       display: flex;
 
@@ -993,7 +944,7 @@
 
       font-family: "Cormorant Garamond", serif;
 
-      font-size: clamp(38px, 3.7vw, 57px);
+      font-size: clamp(38px,3.7vw,56px);
 
       line-height: .98;
 
@@ -1004,26 +955,27 @@
 
     .safety-content p {
 
+      margin-top: 15px;
+
       max-width: 600px;
 
-      margin-top: 17px;
-
-      font-size: 15px;
+      font-size: 14px;
 
       line-height: 1.65;
 
-      color: rgba(255,255,255,.86);
+      color: rgba(255,255,255,.88);
 
     }
 
 
+
     /* =========================================================
-       POR QUE BELLACLASS
+       BENEFÍCIOS
     ========================================================== */
 
     .benefits {
 
-      padding: 66px 0 45px;
+      padding: 57px 0 34px;
 
       background: var(--cream);
 
@@ -1034,7 +986,7 @@
 
       text-align: center;
 
-      margin-bottom: 42px;
+      margin-bottom: 38px;
 
     }
 
@@ -1045,7 +997,7 @@
 
       grid-template-columns: repeat(4,1fr);
 
-      gap: 38px;
+      gap: 36px;
 
     }
 
@@ -1054,51 +1006,53 @@
 
       text-align: center;
 
-      padding: 10px 15px;
+      padding: 8px 17px;
 
     }
 
 
     .benefit i {
 
-      font-size: 34px;
-
       color: var(--rose);
+
+      font-size: 33px;
 
     }
 
 
     .benefit h3 {
 
-      margin-top: 12px;
+      margin-top: 10px;
 
       font-size: 17px;
 
-      line-height: 1.15;
+      line-height: 1.12;
 
     }
 
 
     .benefit p {
 
-      margin-top: 9px;
+      margin-top: 8px;
 
       color: var(--brown-soft);
 
       font-size: 13px;
 
-      line-height: 1.5;
+      line-height: 1.45;
 
     }
 
 
+
     /* =========================================================
        VEÍCULOS
+       FORMATO IGUAL À ARTE APROVADA
     ========================================================== */
 
     .vehicles {
 
-      padding: 30px 0 72px;
+      padding: 31px 0 57px;
 
       background: var(--cream);
 
@@ -1109,7 +1063,7 @@
 
       text-align: center;
 
-      margin-bottom: 30px;
+      margin-bottom: 27px;
 
     }
 
@@ -1118,98 +1072,121 @@
 
       display: grid;
 
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2,minmax(0,1fr));
 
-      gap: 25px;
+      gap: 22px;
 
     }
 
 
-    .vehicle {
+    .vehicle-card {
 
-      min-height: 230px;
+      min-height: 218px;
 
       display: grid;
 
-      grid-template-columns: 48% 52%;
+      grid-template-columns: 46% 54%;
 
       align-items: center;
 
-      padding: 26px;
+      overflow: hidden;
 
-      border-radius: 18px;
+      border: 1px solid var(--border);
 
-      border: 1px solid #eee1dc;
+      border-radius: 19px;
 
-      background: rgba(255,255,255,.6);
+      background: rgba(255,255,255,.46);
+
+      padding: 20px;
 
     }
 
 
-    .vehicle-image {
+    .vehicle-media {
 
       width: 100%;
 
-      height: 180px;
+      height: 178px;
 
-      object-fit: cover;
+      overflow: hidden;
 
       border-radius: 13px;
+
+      background: #eee;
 
     }
 
 
-    .vehicle h3 {
+    .vehicle-media img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: center;
+
+    }
+
+
+    .vehicle-copy {
+
+      padding-left: 24px;
+
+    }
+
+
+    .vehicle-copy h3 {
 
       font-family: "Cormorant Garamond", serif;
 
       font-size: 29px;
 
-      line-height: 1;
+      font-weight: 600;
+
+      line-height: .96;
 
     }
 
 
-    .vehicle p {
+    .vehicle-copy p {
 
-      margin-top: 10px;
-
-      color: var(--brown-soft);
+      margin-top: 11px;
 
       font-size: 13px;
 
-      line-height: 1.55;
+      line-height: 1.52;
+
+      color: var(--brown-soft);
 
     }
 
 
+
     /* =========================================================
-       REGIÕES
+       REGIÕES ATENDIDAS
     ========================================================== */
 
     .regions {
 
-      position: relative;
-
-      overflow: hidden;
-
       color: white;
 
-      padding: 56px 0;
+      padding: 46px 0;
 
       background:
 
         linear-gradient(
           90deg,
           rgba(10,10,10,.95),
-          rgba(10,10,10,.84)
+          rgba(10,10,10,.76)
         ),
 
         url("/hero-bellaclass.jpg");
 
-      background-size: cover;
-
       background-position: center;
+
+      background-size: cover;
 
     }
 
@@ -1218,11 +1195,11 @@
 
       display: grid;
 
-      grid-template-columns: .9fr 1.1fr;
-
-      gap: 60px;
+      grid-template-columns: .92fr 1.08fr;
 
       align-items: center;
+
+      gap: 50px;
 
     }
 
@@ -1236,98 +1213,137 @@
 
       font-family: "Cormorant Garamond", serif;
 
-      font-size: clamp(43px, 4vw, 62px);
+      font-size: clamp(42px,4vw,60px);
 
-      line-height: .96;
-
-    }
-
-
-    /* =========================================================
-       MAPA
-    ========================================================== */
-
-    .sp-map {
-
-      width: 100%;
-
-      max-width: 575px;
-
-      justify-self: end;
-
-    }
-
-
-    .sp-map svg {
-
-      width: 100%;
-
-      overflow: visible;
-
-    }
-
-
-    .map-outline {
-
-      fill: rgba(230,171,150,.08);
-
-      stroke: #e6ab96;
-
-      stroke-width: 2;
-
-    }
-
-
-    .map-pin circle {
-
-      fill: var(--rose);
-
-      stroke: white;
-
-      stroke-width: 3;
-
-    }
-
-
-    .map-pin text {
-
-      fill: white;
-
-      font-family: "Montserrat", sans-serif;
-
-      font-size: 15px;
+      line-height: .94;
 
       font-weight: 600;
 
     }
 
 
-    .map-label {
 
-      fill: rgba(255,255,255,.82);
+    /* =========================================================
+       MAPA IBGE
+    ========================================================== */
 
-      font-family: "Montserrat", sans-serif;
+    .sp-map-wrap {
 
-      font-size: 17px;
+      width: 100%;
 
-      font-weight: 500;
+      min-height: 310px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
 
     }
 
 
+    #spMap {
+
+      width: 100%;
+
+      max-width: 620px;
+
+      height: 310px;
+
+      overflow: visible;
+
+    }
+
+
+    #spMap .state-outline {
+
+      fill: rgba(232,169,142,.08);
+
+      stroke: #efae94;
+
+      stroke-width: 2;
+
+      vector-effect: non-scaling-stroke;
+
+    }
+
+
+    #spMap .map-state-label {
+
+      fill: rgba(255,255,255,.78);
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+      pointer-events: none;
+
+    }
+
+
+    #spMap .city-point {
+
+      fill: #d96b77;
+
+      stroke: #ffffff;
+
+      stroke-width: 3;
+
+      vector-effect: non-scaling-stroke;
+
+    }
+
+
+    #spMap .city-label {
+
+      fill: #ffffff;
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      paint-order: stroke;
+
+      stroke: rgba(0,0,0,.45);
+
+      stroke-width: 3px;
+
+      stroke-linejoin: round;
+
+    }
+
+
+    .map-loading {
+
+      color: rgba(255,255,255,.76);
+
+      font-size: 13px;
+
+      text-align: center;
+
+    }
+
+
+
     /* =========================================================
-       CTA
+       CTA FINAL
     ========================================================== */
 
     .final-cta {
+
+      padding: 58px 0;
 
       background:
 
         linear-gradient(
           90deg,
-          rgba(255,244,240,.98) 0%,
-          rgba(255,244,240,.92) 43%,
-          rgba(255,244,240,.32) 100%
+          rgba(255,244,239,.99) 0%,
+          rgba(255,244,239,.93) 46%,
+          rgba(255,244,239,.28) 100%
         ),
 
         url("/hero-bellaclass.jpg");
@@ -1335,8 +1351,6 @@
       background-size: cover;
 
       background-position: center;
-
-      padding: 67px 0;
 
     }
 
@@ -1350,37 +1364,37 @@
 
       font-family: "Cormorant Garamond", serif;
 
-      font-size: clamp(45px, 4vw, 62px);
+      font-size: clamp(43px,4vw,60px);
 
-      line-height: 1;
+      line-height: .98;
 
     }
 
 
     .final-content p {
 
-      margin-top: 13px;
-
-      font-size: 15px;
-
-      line-height: 1.6;
+      margin-top: 12px;
 
       color: var(--brown-soft);
+
+      font-size: 14px;
+
+      line-height: 1.6;
 
     }
 
 
     .final-button {
 
-      margin-top: 25px;
-
       display: inline-flex;
 
       align-items: center;
 
-      gap: 10px;
+      gap: 9px;
 
-      padding: 15px 26px;
+      margin-top: 22px;
+
+      padding: 15px 25px;
 
       border-radius: 999px;
 
@@ -1395,17 +1409,18 @@
     }
 
 
+
     /* =========================================================
        FOOTER
     ========================================================== */
 
     .site-footer {
 
+      padding: 25px 0;
+
       background: #070707;
 
       color: white;
-
-      padding: 28px 0;
 
     }
 
@@ -1416,14 +1431,14 @@
 
       align-items: center;
 
-      gap: 30px;
+      gap: 27px;
 
     }
 
 
     .footer-logo img {
 
-      width: 160px;
+      width: 155px;
 
       filter: brightness(0) invert(1);
 
@@ -1438,9 +1453,9 @@
 
       margin-left: auto;
 
-      font-size: 11px;
-
       color: rgba(255,255,255,.78);
+
+      font-size: 11px;
 
     }
 
@@ -1449,11 +1464,9 @@
 
       display: flex;
 
-      align-items: center;
-
       gap: 13px;
 
-      margin-left: 22px;
+      margin-left: 20px;
 
     }
 
@@ -1469,21 +1482,22 @@
 
     .footer-phone {
 
-      display: inline-flex;
+      display: flex;
 
       align-items: center;
 
       gap: 8px;
 
+      border-left: 1px solid rgba(255,255,255,.2);
+
       padding-left: 18px;
-
-      border-left: 1px solid rgba(255,255,255,.22);
-
-      font-size: 12px;
 
       white-space: nowrap;
 
+      font-size: 12px;
+
     }
+
 
 
     /* =========================================================
@@ -1494,21 +1508,21 @@
 
       position: fixed;
 
-      width: 57px;
-
-      height: 57px;
-
       right: 22px;
 
       bottom: 22px;
+
+      width: 57px;
+
+      height: 57px;
 
       z-index: 999;
 
       display: flex;
 
-      align-items: center;
-
       justify-content: center;
+
+      align-items: center;
 
       border-radius: 50%;
 
@@ -1518,40 +1532,44 @@
 
       font-size: 28px;
 
-      box-shadow: 0 8px 28px rgba(0,0,0,.23);
+      box-shadow: 0 8px 27px rgba(0,0,0,.24);
 
     }
 
 
+
     /* =========================================================
-       MOBILE
+       RESPONSIVO
     ========================================================== */
 
-    @media (max-width: 1050px) {
+    @media(max-width:1050px) {
 
       .main-nav {
         display: none;
       }
 
-      .mobile-toggle {
-        display: block;
-      }
 
       .header-cta {
         display: none;
       }
 
-      .services-grid {
-        grid-template-columns: repeat(2,1fr);
+
+      .mobile-toggle {
+        display: block;
       }
+
+
+      .services-grid {
+
+        grid-template-columns: repeat(2,1fr);
+
+      }
+
 
       .service-card:last-child {
         grid-column: span 2;
       }
 
-      .benefits-grid {
-        grid-template-columns: repeat(2,1fr);
-      }
 
       .footer-nav {
         display: none;
@@ -1560,30 +1578,28 @@
     }
 
 
-    @media (max-width: 760px) {
+
+    @media(max-width:800px) {
 
       .container,
       .header-inner,
       .hero-content {
 
-        width: min(
-          100% - 34px,
-          var(--container)
-        );
+        width: calc(100% - 34px);
 
       }
 
 
       .hero {
 
-        min-height: 680px;
+        min-height: 660px;
 
         background:
 
           linear-gradient(
             90deg,
-            rgba(0,0,0,.96),
-            rgba(0,0,0,.65)
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.58)
           ),
 
           url("/hero-bellaclass.jpg");
@@ -1595,24 +1611,9 @@
       }
 
 
-      .hero-content {
-        padding-top: 70px;
-      }
-
-
-      .hero h1 {
-        font-size: 54px;
-      }
-
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-
       .experience-grid,
-      .regions-grid,
-      .safety {
+      .safety,
+      .regions-grid {
 
         grid-template-columns: 1fr;
 
@@ -1620,21 +1621,12 @@
 
 
       .experience-image {
-        min-height: 330px;
-      }
-
-
-      .quality-icons {
-
-        grid-template-columns: repeat(2,1fr);
-
+        min-height: 320px;
       }
 
 
       .services-grid {
-
         grid-template-columns: 1fr;
-
       }
 
 
@@ -1643,53 +1635,28 @@
       }
 
 
-      .service-card {
-        min-height: 0;
-      }
-
-
       .benefits-grid {
-
         grid-template-columns: 1fr 1fr;
-
-        gap: 20px;
-
       }
 
 
       .vehicles-grid {
-
         grid-template-columns: 1fr;
-
       }
 
 
-      .vehicle {
-
-        grid-template-columns: 1fr;
-
-        gap: 20px;
-
+      .vehicle-card {
+        grid-template-columns: 42% 58%;
       }
 
 
-      .vehicle-image {
-        height: 220px;
+      .sp-map-wrap {
+        min-height: 270px;
       }
 
 
-      .regions-grid {
-        gap: 35px;
-      }
-
-
-      .sp-map {
-        justify-self: center;
-      }
-
-
-      .safety-content {
-        padding: 45px 28px;
+      #spMap {
+        height: 270px;
       }
 
 
@@ -1699,13 +1666,11 @@
 
         justify-content: center;
 
-        text-align: center;
-
       }
 
 
       .footer-social {
-        margin: 0;
+        margin-left: 0;
       }
 
 
@@ -1724,12 +1689,16 @@
     }
 
 
-    @media (max-width: 500px) {
 
-      .hero-locations {
+    @media(max-width:550px) {
 
-        font-size: 12px;
+      .hero h1 {
+        font-size: 52px;
+      }
 
+
+      .quality-icons {
+        grid-template-columns: repeat(2,1fr);
       }
 
 
@@ -1738,13 +1707,29 @@
       }
 
 
-      .quality-icons {
-        grid-template-columns: 1fr 1fr;
+      .vehicle-card {
+
+        grid-template-columns: 1fr;
+
+        padding: 16px;
+
       }
 
 
-      .section-title {
-        font-size: 42px;
+      .vehicle-media {
+        height: 210px;
+      }
+
+
+      .vehicle-copy {
+
+        padding: 19px 4px 3px;
+
+      }
+
+
+      .regions-title {
+        font-size: 43px;
       }
 
     }
@@ -1752,6 +1737,7 @@
   </style>
 
 </head>
+
 
 
 <body>
@@ -1829,12 +1815,12 @@
     style="
       display:none;
       position:absolute;
-      top:76px;
       left:0;
       right:0;
-      background:#090909;
-      padding:25px;
-      border-top:1px solid rgba(255,255,255,.1);
+      top:76px;
+      padding:24px;
+      background:#080808;
+      color:white;
     "
   >
 
@@ -1886,11 +1872,13 @@
 
 
 
+<main>
+
+
+
 <!-- =========================================================
      HERO
 ========================================================== -->
-
-<main>
 
 <section class="hero">
 
@@ -1902,10 +1890,17 @@
         Transporte Executivo Feminino
       </div>
 
+
       <h1>
+
         Transporte executivo<br>
-        pensado para <em>mulheres</em>
+
+        pensado para
+
+        <em>mulheres</em>
+
       </h1>
+
 
       <p class="hero-description">
 
@@ -1917,6 +1912,7 @@
 
 
       <div class="hero-actions">
+
 
         <a
           class="hero-btn primary"
@@ -1937,8 +1933,11 @@
           class="hero-btn secondary"
           href="#servicos"
         >
+
           Nossos serviços
+
         </a>
+
 
       </div>
 
@@ -1953,6 +1952,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1962,7 +1962,7 @@
 
 
 <!-- =========================================================
-     EXPERIÊNCIA PARA MULHERES
+     EXPERIÊNCIA
 ========================================================== -->
 
 <section class="experience">
@@ -1970,6 +1970,7 @@
   <div class="container">
 
     <div class="experience-grid">
+
 
       <div
         class="experience-image"
@@ -1980,13 +1981,18 @@
 
       <div class="experience-copy">
 
+
         <span class="eyebrow">
           Mais do que um trajeto
         </span>
 
+
         <h2 class="section-title">
+
           Uma experiência criada<br>
+
           para mulheres
+
         </h2>
 
 
@@ -2000,6 +2006,7 @@
 
 
         <div class="quality-icons">
+
 
           <div class="quality-item">
 
@@ -2035,6 +2042,7 @@
             Excelência
 
           </div>
+
 
         </div>
 
@@ -2079,7 +2087,7 @@
     <div class="services-grid">
 
 
-      <!-- TRANSFER AEROPORTO -->
+      <!-- AEROPORTO -->
 
       <article class="service-card">
 
@@ -2088,21 +2096,19 @@
         <div class="service-content">
 
           <h3>
-            Transfer para<br>
-            aeroportos
+            Transfer para aeroporto
           </h3>
 
           <p>
 
-            Traslados previamente organizados para embarques e
-            desembarques em Viracopos, Guarulhos e Congonhas,
-            com conforto e atendimento feminino.
+            Pontualidade e conforto para embarques e desembarques,
+            com atendimento feminino e trajeto previamente organizado.
 
           </p>
 
           <a
-            class="service-link"
             href="/transfer-aeroporto/"
+            class="service-link"
           >
 
             Saiba mais
@@ -2126,21 +2132,19 @@
         <div class="service-content">
 
           <h3>
-            Viagens<br>
-            executivas
+            Viagens executivas
           </h3>
 
           <p>
 
-            Deslocamentos intermunicipais para compromissos,
-            viagens profissionais, pessoais e outras localidades
-            previamente combinadas.
+            Deslocamentos para reuniões, compromissos,
+            viagens profissionais e viagens intermunicipais.
 
           </p>
 
           <a
-            class="service-link"
             href="/viagens-executivas/"
+            class="service-link"
           >
 
             Saiba mais
@@ -2164,20 +2168,20 @@
         <div class="service-content">
 
           <h3>
-            Shows e<br>
-            eventos
+            Shows e eventos
           </h3>
 
           <p>
 
-            Transporte para shows, festivais, casamentos, festas
-            e eventos sociais, com planejamento de ida e retorno.
+            Transporte para shows, festivais, casamentos,
+            festas e eventos sociais com planejamento de
+            ida e retorno.
 
           </p>
 
           <a
-            class="service-link"
             href="/shows-e-eventos/"
+            class="service-link"
           >
 
             Saiba mais
@@ -2201,21 +2205,20 @@
         <div class="service-content">
 
           <h3>
-            Transporte<br>
-            corporativo
+            Transporte corporativo
           </h3>
 
           <p>
 
-            Soluções para empresas e profissionais, com emissão
-            de nota fiscal e possibilidade de faturamento
-            mediante análise cadastral.
+            Atendimento para empresas e profissionais,
+            com emissão de nota fiscal e possibilidade
+            de faturamento mediante análise cadastral.
 
           </p>
 
           <a
-            class="service-link"
             href="/transporte-corporativo/"
+            class="service-link"
           >
 
             Saiba mais
@@ -2230,7 +2233,7 @@
 
 
 
-      <!-- MOTORISTA À DISPOSIÇÃO -->
+      <!-- DISPOSIÇÃO -->
 
       <article class="service-card">
 
@@ -2239,20 +2242,20 @@
         <div class="service-content">
 
           <h3>
-            Motorista à<br>
-            disposição
+            Motorista à disposição
           </h3>
 
           <p>
 
-            Atendimento por período para agendas com um ou mais
-            deslocamentos, oferecendo praticidade e flexibilidade.
+            Atendimento por período para agendas com
+            diferentes deslocamentos, oferecendo mais
+            praticidade e flexibilidade.
 
           </p>
 
           <a
-            class="service-link"
             href="/motorista-a-disposicao/"
+            class="service-link"
           >
 
             Saiba mais
@@ -2280,6 +2283,7 @@
 
 <section class="safety">
 
+
   <div
     class="safety-image"
     role="img"
@@ -2293,22 +2297,27 @@
       Atendimento feminino
     </span>
 
+
     <h2 class="safety-title">
 
       Segurança que começa<br>
+
       com identificação e cuidado.
 
     </h2>
 
+
     <p>
 
-      A BellaClass oferece atendimento feminino, profissional,
-      discreto e acolhedor, para que cada cliente possa realizar
-      seus deslocamentos com mais tranquilidade e organização.
+      A BellaClass oferece atendimento feminino,
+      profissional, discreto e acolhedor para que
+      cada cliente possa realizar seus deslocamentos
+      com mais tranquilidade.
 
     </p>
 
   </div>
+
 
 </section>
 
@@ -2321,6 +2330,7 @@
 <section class="benefits">
 
   <div class="container">
+
 
     <div class="benefits-heading">
 
@@ -2349,7 +2359,8 @@
 
         <p>
 
-          Transporte executivo pensado especialmente para mulheres.
+          Transporte executivo pensado
+          especialmente para mulheres.
 
         </p>
 
@@ -2368,7 +2379,8 @@
 
         <p>
 
-          Atendimento organizado e trajetos previamente planejados.
+          Atendimento organizado e trajetos
+          previamente planejados.
 
         </p>
 
@@ -2387,7 +2399,8 @@
 
         <p>
 
-          Uma experiência discreta, confortável e personalizada.
+          Uma experiência discreta,
+          confortável e personalizada.
 
         </p>
 
@@ -2406,7 +2419,8 @@
 
         <p>
 
-          Agendamento conforme sua agenda e disponibilidade.
+          Atendimento de acordo com
+          sua agenda e disponibilidade.
 
         </p>
 
@@ -2449,60 +2463,85 @@
     <div class="vehicles-grid">
 
 
-      <article class="vehicle">
+      <!-- COROLLA -->
 
-        <img
-          src="/corolla-vcp.jpg"
-          alt="Toyota Corolla Altis Premium Híbrido BellaClass"
-          class="vehicle-image"
-          loading="lazy"
-        >
+      <article class="vehicle-card">
 
-        <div>
+
+        <div class="vehicle-media">
+
+          <img
+            src="/corolla-vcp.jpg"
+            alt="Toyota Corolla Altis Premium Híbrido da BellaClass"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="vehicle-copy">
 
           <h3>
+
             Toyota Corolla<br>
+
             Altis Premium Híbrido
+
           </h3>
+
 
           <p>
 
             Sofisticação, conforto e uma condução silenciosa
-            para proporcionar uma experiência agradável em
-            cada deslocamento.
+            para proporcionar uma experiência agradável
+            em cada deslocamento.
 
           </p>
 
         </div>
+
 
       </article>
 
 
 
-      <article class="vehicle">
+      <!-- T-CROSS -->
 
-        <img
-          src="/tcross-vcp.jpg"
-          alt="Volkswagen T-Cross BellaClass"
-          class="vehicle-image"
-          loading="lazy"
-        >
+      <article class="vehicle-card">
 
-        <div>
+
+        <div class="vehicle-media">
+
+          <img
+            src="/tcross-vcp.jpg"
+            alt="Volkswagen T-Cross da BellaClass"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="vehicle-copy">
 
           <h3>
+
             Volkswagen<br>
+
             T-Cross
+
           </h3>
+
 
           <p>
 
-            Versatilidade, conforto e espaço para diferentes
-            necessidades da sua rotina e das suas viagens.
+            Versatilidade, conforto e espaço para
+            diferentes necessidades da sua rotina
+            e das suas viagens.
 
           </p>
 
         </div>
+
 
       </article>
 
@@ -2526,6 +2565,7 @@
 
   <div class="container">
 
+
     <div class="regions-grid">
 
 
@@ -2535,10 +2575,15 @@
           Regiões atendidas
         </span>
 
+
         <h2 class="regions-title">
 
-          Indaiatuba, Campinas e região,<br>
+          Indaiatuba,<br>
+
+          Campinas e região,<br>
+
           São Paulo e outras localidades<br>
+
           sob consulta.
 
         </h2>
@@ -2547,177 +2592,37 @@
 
 
 
-      <!--
-        MAPA ESTILIZADO DO ESTADO DE SÃO PAULO
-
-        Os marcadores indicam aproximadamente:
-        Campinas
-        Indaiatuba
-        São Paulo Capital
-      -->
+      <!-- MAPA OFICIAL DO ESTADO DE SÃO PAULO -->
 
       <div
-        class="sp-map"
-        aria-label="Mapa do Estado de São Paulo com destaque para Campinas, Indaiatuba e São Paulo"
+        class="sp-map-wrap"
+        aria-label="Mapa do Estado de São Paulo mostrando Campinas, Indaiatuba e São Paulo"
       >
 
         <svg
-          viewBox="0 0 620 315"
+          id="spMap"
+          viewBox="0 0 620 310"
           role="img"
-          aria-labelledby="mapTitle"
+          aria-labelledby="spMapTitle"
         >
 
-          <title id="mapTitle">
-            Estado de São Paulo com Campinas, Indaiatuba e São Paulo em destaque
+          <title id="spMapTitle">
+            Mapa do Estado de São Paulo com Campinas, Indaiatuba e São Paulo em destaque
           </title>
 
+          <g id="stateLayer"></g>
 
-          <!-- CONTORNO ESTILIZADO DO ESTADO -->
-
-          <path
-            class="map-outline"
-            d="
-              M52 168
-              L75 155
-              L94 139
-              L113 124
-              L134 104
-              L161 93
-              L182 74
-              L214 69
-              L237 58
-              L267 63
-              L290 51
-              L322 59
-              L345 52
-              L369 63
-              L399 61
-              L418 76
-              L450 78
-              L472 91
-              L505 96
-              L516 113
-              L548 123
-              L558 142
-              L579 152
-              L566 165
-              L579 179
-              L563 191
-              L569 210
-              L543 216
-              L533 231
-              L507 236
-              L487 251
-              L458 252
-              L436 266
-              L410 265
-              L387 279
-              L359 275
-              L333 286
-              L304 278
-              L279 286
-              L251 275
-              L221 278
-              L198 266
-              L169 263
-              L150 249
-              L121 246
-              L107 226
-              L83 218
-              L77 198
-              L57 190
-              Z
-            "
-          />
-
-
-          <text
-            x="270"
-            y="170"
-            class="map-label"
-          >
-            Estado de
-          </text>
-
-          <text
-            x="270"
-            y="192"
-            class="map-label"
-          >
-            São Paulo
-          </text>
-
-
-          <!-- CAMPINAS -->
-
-          <g
-            class="map-pin"
-            aria-label="Campinas"
-          >
-
-            <circle
-              cx="393"
-              cy="127"
-              r="9"
-            />
-
-            <text
-              x="410"
-              y="132"
-            >
-              Campinas
-            </text>
-
-          </g>
-
-
-          <!-- INDAIATUBA -->
-
-          <g
-            class="map-pin"
-            aria-label="Indaiatuba"
-          >
-
-            <circle
-              cx="382"
-              cy="154"
-              r="9"
-            />
-
-            <text
-              x="398"
-              y="160"
-            >
-              Indaiatuba
-            </text>
-
-          </g>
-
-
-          <!-- SÃO PAULO -->
-
-          <g
-            class="map-pin"
-            aria-label="São Paulo"
-          >
-
-            <circle
-              cx="444"
-              cy="219"
-              r="9"
-            />
-
-            <text
-              x="461"
-              y="224"
-            >
-              São Paulo
-            </text>
-
-          </g>
-
+          <g id="cityLayer"></g>
 
         </svg>
+
+        <div
+          id="mapLoading"
+          class="map-loading"
+          style="display:none;"
+        >
+          Carregando mapa...
+        </div>
 
       </div>
 
@@ -2738,21 +2643,24 @@
 
   <div class="container">
 
+
     <div class="final-content">
 
       <span class="eyebrow">
         Fale com a gente e planeje o seu trajeto
       </span>
 
+
       <h2 class="final-title">
         Solicite seu orçamento
       </h2>
 
+
       <p>
 
         Fale com a BellaClass e receba um atendimento
-        personalizado de acordo com seu trajeto, horário e
-        necessidade.
+        personalizado de acordo com seu trajeto,
+        horário e necessidade.
 
       </p>
 
@@ -2771,11 +2679,13 @@
 
       </a>
 
+
     </div>
 
   </div>
 
 </section>
+
 
 
 </main>
@@ -2825,13 +2735,16 @@
 
       <div class="footer-social">
 
+
         <a
           href="https://www.instagram.com/bellaclass.transfer"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
         >
+
           <i class="bi bi-instagram"></i>
+
         </a>
 
 
@@ -2841,7 +2754,9 @@
           rel="noopener"
           aria-label="Facebook"
         >
+
           <i class="bi bi-facebook"></i>
+
         </a>
 
 
@@ -2851,8 +2766,11 @@
           rel="noopener"
           aria-label="LinkedIn"
         >
+
           <i class="bi bi-linkedin"></i>
+
         </a>
+
 
       </div>
 
@@ -2899,31 +2817,600 @@
 
 
 
-<!-- =========================================================
-     MENU MOBILE
-========================================================== -->
-
 <script>
+
+  /* =========================================================
+     MENU MOBILE
+  ========================================================== */
 
   function toggleMenu() {
 
     const menu =
       document.getElementById("mobileMenu");
 
-    if (menu.style.display === "block") {
+    menu.style.display =
+      menu.style.display === "block"
+        ? "none"
+        : "block";
 
-      menu.style.display = "none";
+  }
 
-    } else {
 
-      menu.style.display = "block";
+
+  /* =========================================================
+     MAPA OFICIAL DE SÃO PAULO - IBGE
+
+     Carrega a malha geográfica oficial do Estado de SP
+     diretamente da API do IBGE.
+
+     Depois converte coordenadas geográficas para SVG.
+
+     Coordenadas reais usadas:
+     Campinas   -22.9056, -47.0608
+     Indaiatuba -23.0903, -47.2181
+     São Paulo  -23.5505, -46.6333
+  ========================================================== */
+
+
+  async function carregarMapaSP() {
+
+    const stateLayer =
+      document.getElementById("stateLayer");
+
+    const cityLayer =
+      document.getElementById("cityLayer");
+
+
+    const svgWidth = 620;
+    const svgHeight = 310;
+
+    const padding = 25;
+
+
+    try {
+
+      const response = await fetch(
+        "https://servicodados.ibge.gov.br/api/v3/malhas/estados/35?formato=application/vnd.geo+json&qualidade=minima"
+      );
+
+
+      if (!response.ok) {
+        throw new Error("Não foi possível carregar a malha.");
+      }
+
+
+      const geojson =
+        await response.json();
+
+
+      let coordinates = [];
+
+
+      function coletarCoordenadas(input) {
+
+        if (
+          Array.isArray(input) &&
+          typeof input[0] === "number"
+        ) {
+
+          coordinates.push(input);
+
+          return;
+
+        }
+
+
+        input.forEach(coletarCoordenadas);
+
+      }
+
+
+      geojson.features.forEach(feature => {
+
+        coletarCoordenadas(
+          feature.geometry.coordinates
+        );
+
+      });
+
+
+      const longitudes =
+        coordinates.map(point => point[0]);
+
+      const latitudes =
+        coordinates.map(point => point[1]);
+
+
+      const minLon =
+        Math.min(...longitudes);
+
+      const maxLon =
+        Math.max(...longitudes);
+
+      const minLat =
+        Math.min(...latitudes);
+
+      const maxLat =
+        Math.max(...latitudes);
+
+
+      function project(lon, lat) {
+
+        const x =
+          padding +
+          (
+            (lon - minLon) /
+            (maxLon - minLon)
+          ) *
+          (
+            svgWidth -
+            padding * 2
+          );
+
+
+        const y =
+          svgHeight -
+          padding -
+          (
+            (lat - minLat) /
+            (maxLat - minLat)
+          ) *
+          (
+            svgHeight -
+            padding * 2
+          );
+
+
+        return [x,y];
+
+      }
+
+
+      function polygonToPath(rings) {
+
+        return rings.map(ring => {
+
+          return ring.map(
+            (coord,index) => {
+
+              const [x,y] =
+                project(coord[0],coord[1]);
+
+              return (
+                index === 0
+                  ? `M ${x} ${y}`
+                  : `L ${x} ${y}`
+              );
+
+            }
+          ).join(" ") + " Z";
+
+        }).join(" ");
+
+      }
+
+
+      geojson.features.forEach(feature => {
+
+        const geometry =
+          feature.geometry;
+
+
+        if (
+          geometry.type === "Polygon"
+        ) {
+
+          const path =
+            document.createElementNS(
+              "http://www.w3.org/2000/svg",
+              "path"
+            );
+
+
+          path.setAttribute(
+            "d",
+            polygonToPath(
+              geometry.coordinates
+            )
+          );
+
+
+          path.setAttribute(
+            "class",
+            "state-outline"
+          );
+
+
+          stateLayer.appendChild(path);
+
+        }
+
+
+        if (
+          geometry.type === "MultiPolygon"
+        ) {
+
+          geometry.coordinates.forEach(
+            polygon => {
+
+              const path =
+                document.createElementNS(
+                  "http://www.w3.org/2000/svg",
+                  "path"
+                );
+
+
+              path.setAttribute(
+                "d",
+                polygonToPath(polygon)
+              );
+
+
+              path.setAttribute(
+                "class",
+                "state-outline"
+              );
+
+
+              stateLayer.appendChild(path);
+
+            }
+          );
+
+        }
+
+      });
+
+
+
+      /* -----------------------------------------
+         NOME DO ESTADO
+      ----------------------------------------- */
+
+      const center =
+        project(-48.25,-22.75);
+
+
+      const stateText1 =
+        document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text"
+        );
+
+
+      stateText1.setAttribute(
+        "x",
+        center[0]
+      );
+
+
+      stateText1.setAttribute(
+        "y",
+        center[1]
+      );
+
+
+      stateText1.setAttribute(
+        "class",
+        "map-state-label"
+      );
+
+
+      stateText1.textContent =
+        "Estado de";
+
+
+      stateLayer.appendChild(
+        stateText1
+      );
+
+
+      const stateText2 =
+        document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text"
+        );
+
+
+      stateText2.setAttribute(
+        "x",
+        center[0]
+      );
+
+
+      stateText2.setAttribute(
+        "y",
+        center[1] + 20
+      );
+
+
+      stateText2.setAttribute(
+        "class",
+        "map-state-label"
+      );
+
+
+      stateText2.textContent =
+        "São Paulo";
+
+
+      stateLayer.appendChild(
+        stateText2
+      );
+
+
+
+      /* -----------------------------------------
+         CIDADES
+      ----------------------------------------- */
+
+      const cities = [
+
+        {
+          name: "Campinas",
+          lat: -22.9056,
+          lon: -47.0608,
+          dx: 16,
+          dy: -8
+        },
+
+        {
+          name: "Indaiatuba",
+          lat: -23.0903,
+          lon: -47.2181,
+          dx: 16,
+          dy: 18
+        },
+
+        {
+          name: "São Paulo",
+          lat: -23.5505,
+          lon: -46.6333,
+          dx: 17,
+          dy: 5
+        }
+
+      ];
+
+
+      cities.forEach(city => {
+
+        const [x,y] =
+          project(
+            city.lon,
+            city.lat
+          );
+
+
+        const circle =
+          document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "circle"
+          );
+
+
+        circle.setAttribute(
+          "cx",
+          x
+        );
+
+
+        circle.setAttribute(
+          "cy",
+          y
+        );
+
+
+        circle.setAttribute(
+          "r",
+          8
+        );
+
+
+        circle.setAttribute(
+          "class",
+          "city-point"
+        );
+
+
+        cityLayer.appendChild(
+          circle
+        );
+
+
+        const text =
+          document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "text"
+          );
+
+
+        text.setAttribute(
+          "x",
+          x + city.dx
+        );
+
+
+        text.setAttribute(
+          "y",
+          y + city.dy
+        );
+
+
+        text.setAttribute(
+          "class",
+          "city-label"
+        );
+
+
+        text.textContent =
+          city.name;
+
+
+        cityLayer.appendChild(
+          text
+        );
+
+      });
+
+
+    }
+
+
+    catch(error) {
+
+      console.error(
+        "Erro ao carregar mapa:",
+        error
+      );
+
+
+      /* =============================================
+         FALLBACK
+
+         Caso a API do IBGE esteja temporariamente
+         indisponível, a área não fica quebrada.
+      ============================================== */
+
+
+      stateLayer.innerHTML = `
+
+        <path
+          class="state-outline"
+          d="
+            M70 173
+            L91 159
+            L110 140
+            L135 126
+            L152 107
+            L179 94
+            L205 78
+            L234 74
+            L260 63
+            L288 67
+            L312 57
+            L338 64
+            L365 59
+            L390 71
+            L421 72
+            L445 84
+            L477 87
+            L502 101
+            L526 111
+            L540 130
+            L565 142
+            L558 158
+            L570 170
+            L557 186
+            L562 202
+            L542 215
+            L517 220
+            L500 238
+            L471 241
+            L450 256
+            L421 257
+            L397 271
+            L369 267
+            L343 279
+            L314 271
+            L287 279
+            L260 269
+            L228 271
+            L207 258
+            L177 255
+            L157 239
+            L128 235
+            L115 217
+            L90 209
+            L84 191
+            L67 182
+            Z
+          "
+        ></path>
+
+        <text
+          x="260"
+          y="164"
+          class="map-state-label"
+        >
+          Estado de
+        </text>
+
+        <text
+          x="260"
+          y="184"
+          class="map-state-label"
+        >
+          São Paulo
+        </text>
+
+      `;
+
+
+      cityLayer.innerHTML = `
+
+        <circle
+          cx="399"
+          cy="122"
+          r="8"
+          class="city-point"
+        ></circle>
+
+        <text
+          x="416"
+          y="118"
+          class="city-label"
+        >
+          Campinas
+        </text>
+
+
+        <circle
+          cx="389"
+          cy="145"
+          r="8"
+          class="city-point"
+        ></circle>
+
+        <text
+          x="405"
+          y="162"
+          class="city-label"
+        >
+          Indaiatuba
+        </text>
+
+
+        <circle
+          cx="456"
+          cy="218"
+          r="8"
+          class="city-point"
+        ></circle>
+
+        <text
+          x="474"
+          y="224"
+          class="city-label"
+        >
+          São Paulo
+        </text>
+
+      `;
 
     }
 
   }
 
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    carregarMapaSP
+  );
+
 </script>
 
 
 </body>
+
 </html>
