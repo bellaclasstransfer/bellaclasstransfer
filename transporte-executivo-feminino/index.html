@@ -775,6 +775,10 @@
     }
 
 
+    /* =========================================================
+       IMAGENS DOS SERVIÇOS
+    ========================================================== */
+
     .airport-image {
       background-image: url("/hero-bellaclass.jpg");
     }
@@ -790,11 +794,15 @@
       background-image:
 
         linear-gradient(
-          rgba(0,0,0,.18),
-          rgba(0,0,0,.18)
+          rgba(0,0,0,.10),
+          rgba(0,0,0,.16)
         ),
 
-        url("/hero-bellaclass.jpg");
+        url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=85");
+
+      background-position: center;
+
+      background-size: cover;
 
     }
 
@@ -806,14 +814,13 @@
 
     .driver-image {
 
-      background-image:
+      background-image: url("/tcross-vcp.jpg");
 
-        linear-gradient(
-          rgba(0,0,0,.32),
-          rgba(0,0,0,.32)
-        ),
+      background-position: center;
 
-        url("/tcross-interior.jpg");
+      background-size: cover;
+
+      filter: none;
 
     }
 
@@ -1273,19 +1280,6 @@
       font-weight: 500;
 
       pointer-events: none;
-
-    }
-
-
-    #spMap .city-point {
-
-      fill: #d96b77;
-
-      stroke: #ffffff;
-
-      stroke-width: 3;
-
-      vector-effect: non-scaling-stroke;
 
     }
 
@@ -2491,8 +2485,6 @@
 
           <g id="stateLayer"></g>
 
-          <g id="cityLayer"></g>
-
         </svg>
 
       </div>
@@ -2697,15 +2689,13 @@
 
   /* =========================================================
      MAPA OFICIAL DO ESTADO DE SÃO PAULO
+     SEM MARCAÇÕES DE CIDADES
   ========================================================== */
 
   async function carregarMapaSP() {
 
     const stateLayer =
       document.getElementById("stateLayer");
-
-    const cityLayer =
-      document.getElementById("cityLayer");
 
 
     const svgWidth = 650;
@@ -2907,7 +2897,7 @@
 
 
       /* =====================================================
-         TEXTO DO ESTADO
+         TEXTO "ESTADO DE SÃO PAULO"
       ===================================================== */
 
       const center =
@@ -2981,78 +2971,6 @@
         stateText2
       );
 
-
-
-      /* =====================================================
-         PONTOS DAS CIDADES
-         Sem nomes no mapa
-      ===================================================== */
-
-      const cities = [
-
-        {
-          lat: -22.9056,
-          lon: -47.0608
-        },
-
-        {
-          lat: -23.0903,
-          lon: -47.2181
-        },
-
-        {
-          lat: -23.5505,
-          lon: -46.6333
-        }
-
-      ];
-
-
-      cities.forEach(city => {
-
-        const [x, y] =
-          project(
-            city.lon,
-            city.lat
-          );
-
-
-        const circle =
-          document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "circle"
-          );
-
-
-        circle.setAttribute(
-          "cx",
-          x
-        );
-
-
-        circle.setAttribute(
-          "cy",
-          y
-        );
-
-
-        circle.setAttribute(
-          "r",
-          8
-        );
-
-
-        circle.setAttribute(
-          "class",
-          "city-point"
-        );
-
-
-        cityLayer.appendChild(circle);
-
-      });
-
-
     }
 
 
@@ -3065,7 +2983,7 @@
 
 
       /* =====================================================
-         FALLBACK DO MAPA
+         FALLBACK SEM PONTOS
       ===================================================== */
 
       stateLayer.innerHTML = `
@@ -3138,32 +3056,6 @@
         >
           São Paulo
         </text>
-
-      `;
-
-
-      cityLayer.innerHTML = `
-
-        <circle
-          cx="399"
-          cy="122"
-          r="8"
-          class="city-point"
-        ></circle>
-
-        <circle
-          cx="389"
-          cy="145"
-          r="8"
-          class="city-point"
-        ></circle>
-
-        <circle
-          cx="456"
-          cy="218"
-          r="8"
-          class="city-point"
-        ></circle>
 
       `;
 
