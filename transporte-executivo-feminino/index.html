@@ -1264,11 +1264,11 @@
 
     #spMap .map-state-label {
 
-      fill: rgba(255,255,255,.78);
+      fill: rgba(255,255,255,.82);
 
       font-family: "Montserrat", sans-serif;
 
-      font-size: 15px;
+      font-size: 16px;
 
       font-weight: 500;
 
@@ -1284,40 +1284,6 @@
       stroke: #ffffff;
 
       stroke-width: 3;
-
-      vector-effect: non-scaling-stroke;
-
-    }
-
-
-    #spMap .city-label {
-
-      fill: #ffffff;
-
-      font-family: "Montserrat", sans-serif;
-
-      font-size: 14px;
-
-      font-weight: 700;
-
-      paint-order: stroke;
-
-      stroke: rgba(0,0,0,.55);
-
-      stroke-width: 3px;
-
-      stroke-linejoin: round;
-
-    }
-
-
-    #spMap .city-line {
-
-      stroke: #efae94;
-
-      stroke-width: 1.5;
-
-      opacity: .95;
 
       vector-effect: non-scaling-stroke;
 
@@ -2509,7 +2475,7 @@
 
       <div
         class="sp-map-wrap"
-        aria-label="Mapa do Estado de São Paulo mostrando Campinas, Indaiatuba e São Paulo"
+        aria-label="Mapa do Estado de São Paulo"
       >
 
         <svg
@@ -2520,7 +2486,7 @@
         >
 
           <title id="spMapTitle">
-            Mapa do Estado de São Paulo com Campinas, Indaiatuba e São Paulo em destaque
+            Mapa do Estado de São Paulo
           </title>
 
           <g id="stateLayer"></g>
@@ -2941,7 +2907,7 @@
 
 
       /* =====================================================
-         NOME DO ESTADO
+         TEXTO DO ESTADO
       ===================================================== */
 
       const center =
@@ -3018,35 +2984,25 @@
 
 
       /* =====================================================
-         CIDADES
-         Pontos permanecem nas coordenadas reais.
-         Somente os nomes são deslocados.
+         PONTOS DAS CIDADES
+         Sem nomes no mapa
       ===================================================== */
 
       const cities = [
 
         {
-          name: "Campinas",
           lat: -22.9056,
-          lon: -47.0608,
-          dx: 28,
-          dy: -24
+          lon: -47.0608
         },
 
         {
-          name: "Indaiatuba",
           lat: -23.0903,
-          lon: -47.2181,
-          dx: 30,
-          dy: 30
+          lon: -47.2181
         },
 
         {
-          name: "São Paulo",
           lat: -23.5505,
-          lon: -46.6333,
-          dx: 30,
-          dy: 15
+          lon: -46.6333
         }
 
       ];
@@ -3054,57 +3010,12 @@
 
       cities.forEach(city => {
 
-        const [x,y] =
+        const [x, y] =
           project(
             city.lon,
             city.lat
           );
 
-
-        /* LINHA LIGANDO PONTO AO NOME */
-
-        const line =
-          document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "line"
-          );
-
-
-        line.setAttribute(
-          "x1",
-          x + 7
-        );
-
-
-        line.setAttribute(
-          "y1",
-          y
-        );
-
-
-        line.setAttribute(
-          "x2",
-          x + city.dx - 6
-        );
-
-
-        line.setAttribute(
-          "y2",
-          y + city.dy - 5
-        );
-
-
-        line.setAttribute(
-          "class",
-          "city-line"
-        );
-
-
-        cityLayer.appendChild(line);
-
-
-
-        /* PONTO DA CIDADE */
 
         const circle =
           document.createElementNS(
@@ -3139,41 +3050,6 @@
 
         cityLayer.appendChild(circle);
 
-
-
-        /* NOME */
-
-        const text =
-          document.createElementNS(
-            "http://www.w3.org/2000/svg",
-            "text"
-          );
-
-
-        text.setAttribute(
-          "x",
-          x + city.dx
-        );
-
-
-        text.setAttribute(
-          "y",
-          y + city.dy
-        );
-
-
-        text.setAttribute(
-          "class",
-          "city-label"
-        );
-
-
-        text.textContent =
-          city.name;
-
-
-        cityLayer.appendChild(text);
-
       });
 
 
@@ -3189,7 +3065,7 @@
 
 
       /* =====================================================
-         FALLBACK
+         FALLBACK DO MAPA
       ===================================================== */
 
       stateLayer.innerHTML = `
@@ -3268,37 +3144,12 @@
 
       cityLayer.innerHTML = `
 
-        <line
-          x1="406"
-          y1="122"
-          x2="438"
-          y2="93"
-          class="city-line"
-        ></line>
-
         <circle
           cx="399"
           cy="122"
           r="8"
           class="city-point"
         ></circle>
-
-        <text
-          x="442"
-          y="90"
-          class="city-label"
-        >
-          Campinas
-        </text>
-
-
-        <line
-          x1="396"
-          y1="145"
-          x2="433"
-          y2="174"
-          class="city-line"
-        ></line>
 
         <circle
           cx="389"
@@ -3307,37 +3158,12 @@
           class="city-point"
         ></circle>
 
-        <text
-          x="439"
-          y="182"
-          class="city-label"
-        >
-          Indaiatuba
-        </text>
-
-
-        <line
-          x1="463"
-          y1="218"
-          x2="495"
-          y2="231"
-          class="city-line"
-        ></line>
-
         <circle
           cx="456"
           cy="218"
           r="8"
           class="city-point"
         ></circle>
-
-        <text
-          x="502"
-          y="237"
-          class="city-label"
-        >
-          São Paulo
-        </text>
 
       `;
 
