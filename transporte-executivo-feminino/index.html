@@ -201,12 +201,7 @@
   </script>
 
 
-
   <style>
-
-    /* =========================================================
-       CONFIGURAÇÕES GERAIS
-    ========================================================== */
 
     :root {
 
@@ -1047,7 +1042,6 @@
 
     /* =========================================================
        VEÍCULOS
-       FORMATO IGUAL À ARTE APROVADA
     ========================================================== */
 
     .vehicles {
@@ -1224,7 +1218,7 @@
 
 
     /* =========================================================
-       MAPA IBGE
+       MAPA
     ========================================================== */
 
     .sp-map-wrap {
@@ -1246,7 +1240,7 @@
 
       width: 100%;
 
-      max-width: 620px;
+      max-width: 650px;
 
       height: 310px;
 
@@ -1308,7 +1302,7 @@
 
       paint-order: stroke;
 
-      stroke: rgba(0,0,0,.45);
+      stroke: rgba(0,0,0,.55);
 
       stroke-width: 3px;
 
@@ -1317,13 +1311,15 @@
     }
 
 
-    .map-loading {
+    #spMap .city-line {
 
-      color: rgba(255,255,255,.76);
+      stroke: #efae94;
 
-      font-size: 13px;
+      stroke-width: 1.5;
 
-      text-align: center;
+      opacity: .95;
+
+      vector-effect: non-scaling-stroke;
 
     }
 
@@ -1560,9 +1556,7 @@
 
 
       .services-grid {
-
         grid-template-columns: repeat(2,1fr);
-
       }
 
 
@@ -1576,7 +1570,6 @@
       }
 
     }
-
 
 
     @media(max-width:800px) {
@@ -1651,12 +1644,12 @@
 
 
       .sp-map-wrap {
-        min-height: 270px;
+        min-height: 290px;
       }
 
 
       #spMap {
-        height: 270px;
+        height: 290px;
       }
 
 
@@ -1687,7 +1680,6 @@
       }
 
     }
-
 
 
     @media(max-width:550px) {
@@ -1722,9 +1714,7 @@
 
 
       .vehicle-copy {
-
         padding: 19px 4px 3px;
-
       }
 
 
@@ -1737,7 +1727,6 @@
   </style>
 
 </head>
-
 
 
 <body>
@@ -1824,56 +1813,19 @@
     "
   >
 
-    <a
-      href="/"
-      style="display:block;padding:10px 0;"
-    >
-      Início
-    </a>
-
-    <a
-      href="/#servicos"
-      style="display:block;padding:10px 0;"
-    >
-      Serviços
-    </a>
-
-    <a
-      href="/#veiculos"
-      style="display:block;padding:10px 0;"
-    >
-      Veículos
-    </a>
-
-    <a
-      href="/#destinos"
-      style="display:block;padding:10px 0;"
-    >
-      Regiões Atendidas
-    </a>
-
-    <a
-      href="/#sobre"
-      style="display:block;padding:10px 0;"
-    >
-      Quem Somos
-    </a>
-
-    <a
-      href="/#contato"
-      style="display:block;padding:10px 0;"
-    >
-      Contato
-    </a>
+    <a href="/" style="display:block;padding:10px 0;">Início</a>
+    <a href="/#servicos" style="display:block;padding:10px 0;">Serviços</a>
+    <a href="/#veiculos" style="display:block;padding:10px 0;">Veículos</a>
+    <a href="/#destinos" style="display:block;padding:10px 0;">Regiões Atendidas</a>
+    <a href="/#sobre" style="display:block;padding:10px 0;">Quem Somos</a>
+    <a href="/#contato" style="display:block;padding:10px 0;">Contato</a>
 
   </div>
 
 </header>
 
 
-
 <main>
-
 
 
 <!-- =========================================================
@@ -1913,7 +1865,6 @@
 
       <div class="hero-actions">
 
-
         <a
           class="hero-btn primary"
           href="https://wa.me/5519990209275?text=Olá!%20Vim%20pela%20página%20de%20Transporte%20Executivo%20Feminino%20da%20BellaClass%20e%20gostaria%20de%20solicitar%20um%20orçamento."
@@ -1938,7 +1889,6 @@
 
         </a>
 
-
       </div>
 
 
@@ -1960,7 +1910,6 @@
 </section>
 
 
-
 <!-- =========================================================
      EXPERIÊNCIA
 ========================================================== -->
@@ -1980,7 +1929,6 @@
 
 
       <div class="experience-copy">
-
 
         <span class="eyebrow">
           Mais do que um trajeto
@@ -2006,7 +1954,6 @@
 
 
         <div class="quality-icons">
-
 
           <div class="quality-item">
 
@@ -2043,7 +1990,6 @@
 
           </div>
 
-
         </div>
 
       </div>
@@ -2053,7 +1999,6 @@
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -2086,8 +2031,6 @@
 
     <div class="services-grid">
 
-
-      <!-- AEROPORTO -->
 
       <article class="service-card">
 
@@ -2122,9 +2065,6 @@
       </article>
 
 
-
-      <!-- VIAGENS -->
-
       <article class="service-card">
 
         <div class="service-image travel-image"></div>
@@ -2158,9 +2098,6 @@
       </article>
 
 
-
-      <!-- EVENTOS -->
-
       <article class="service-card">
 
         <div class="service-image event-image"></div>
@@ -2174,8 +2111,7 @@
           <p>
 
             Transporte para shows, festivais, casamentos,
-            festas e eventos sociais com planejamento de
-            ida e retorno.
+            festas e eventos sociais com planejamento de ida e retorno.
 
           </p>
 
@@ -2194,9 +2130,6 @@
 
       </article>
 
-
-
-      <!-- CORPORATIVO -->
 
       <article class="service-card">
 
@@ -2231,9 +2164,6 @@
 
       </article>
 
-
-
-      <!-- DISPOSIÇÃO -->
 
       <article class="service-card">
 
@@ -2276,13 +2206,11 @@
 </section>
 
 
-
 <!-- =========================================================
      SEGURANÇA
 ========================================================== -->
 
 <section class="safety">
-
 
   <div
     class="safety-image"
@@ -2318,9 +2246,7 @@
 
   </div>
 
-
 </section>
-
 
 
 <!-- =========================================================
@@ -2367,7 +2293,6 @@
       </article>
 
 
-
       <article class="benefit">
 
         <i class="bi bi-shield-check"></i>
@@ -2387,7 +2312,6 @@
       </article>
 
 
-
       <article class="benefit">
 
         <i class="bi bi-gem"></i>
@@ -2405,7 +2329,6 @@
         </p>
 
       </article>
-
 
 
       <article class="benefit">
@@ -2432,7 +2355,6 @@
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -2462,8 +2384,6 @@
 
     <div class="vehicles-grid">
 
-
-      <!-- COROLLA -->
 
       <article class="vehicle-card">
 
@@ -2503,9 +2423,6 @@
 
       </article>
 
-
-
-      <!-- T-CROSS -->
 
       <article class="vehicle-card">
 
@@ -2553,7 +2470,6 @@
 </section>
 
 
-
 <!-- =========================================================
      REGIÕES ATENDIDAS
 ========================================================== -->
@@ -2591,9 +2507,6 @@
       </div>
 
 
-
-      <!-- MAPA OFICIAL DO ESTADO DE SÃO PAULO -->
-
       <div
         class="sp-map-wrap"
         aria-label="Mapa do Estado de São Paulo mostrando Campinas, Indaiatuba e São Paulo"
@@ -2601,7 +2514,7 @@
 
         <svg
           id="spMap"
-          viewBox="0 0 620 310"
+          viewBox="0 0 650 310"
           role="img"
           aria-labelledby="spMapTitle"
         >
@@ -2616,14 +2529,6 @@
 
         </svg>
 
-        <div
-          id="mapLoading"
-          class="map-loading"
-          style="display:none;"
-        >
-          Carregando mapa...
-        </div>
-
       </div>
 
 
@@ -2632,7 +2537,6 @@
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
@@ -2687,9 +2591,7 @@
 </section>
 
 
-
 </main>
-
 
 
 <!-- =========================================================
@@ -2735,16 +2637,13 @@
 
       <div class="footer-social">
 
-
         <a
           href="https://www.instagram.com/bellaclass.transfer"
           target="_blank"
           rel="noopener"
           aria-label="Instagram"
         >
-
           <i class="bi bi-instagram"></i>
-
         </a>
 
 
@@ -2754,9 +2653,7 @@
           rel="noopener"
           aria-label="Facebook"
         >
-
           <i class="bi bi-facebook"></i>
-
         </a>
 
 
@@ -2766,11 +2663,8 @@
           rel="noopener"
           aria-label="LinkedIn"
         >
-
           <i class="bi bi-linkedin"></i>
-
         </a>
-
 
       </div>
 
@@ -2797,7 +2691,6 @@
 </footer>
 
 
-
 <!-- =========================================================
      WHATSAPP FLUTUANTE
 ========================================================== -->
@@ -2814,7 +2707,6 @@
   <i class="bi bi-whatsapp"></i>
 
 </a>
-
 
 
 <script>
@@ -2838,19 +2730,8 @@
 
 
   /* =========================================================
-     MAPA OFICIAL DE SÃO PAULO - IBGE
-
-     Carrega a malha geográfica oficial do Estado de SP
-     diretamente da API do IBGE.
-
-     Depois converte coordenadas geográficas para SVG.
-
-     Coordenadas reais usadas:
-     Campinas   -22.9056, -47.0608
-     Indaiatuba -23.0903, -47.2181
-     São Paulo  -23.5505, -46.6333
+     MAPA OFICIAL DO ESTADO DE SÃO PAULO
   ========================================================== */
-
 
   async function carregarMapaSP() {
 
@@ -2861,10 +2742,10 @@
       document.getElementById("cityLayer");
 
 
-    const svgWidth = 620;
+    const svgWidth = 650;
     const svgHeight = 310;
 
-    const padding = 25;
+    const padding = 24;
 
 
     try {
@@ -2875,7 +2756,7 @@
 
 
       if (!response.ok) {
-        throw new Error("Não foi possível carregar a malha.");
+        throw new Error("Não foi possível carregar o mapa.");
       }
 
 
@@ -2996,9 +2877,7 @@
           feature.geometry;
 
 
-        if (
-          geometry.type === "Polygon"
-        ) {
+        if (geometry.type === "Polygon") {
 
           const path =
             document.createElementNS(
@@ -3026,9 +2905,7 @@
         }
 
 
-        if (
-          geometry.type === "MultiPolygon"
-        ) {
+        if (geometry.type === "MultiPolygon") {
 
           geometry.coordinates.forEach(
             polygon => {
@@ -3063,9 +2940,9 @@
 
 
 
-      /* -----------------------------------------
+      /* =====================================================
          NOME DO ESTADO
-      ----------------------------------------- */
+      ===================================================== */
 
       const center =
         project(-48.25,-22.75);
@@ -3140,9 +3017,11 @@
 
 
 
-      /* -----------------------------------------
+      /* =====================================================
          CIDADES
-      ----------------------------------------- */
+         Pontos permanecem nas coordenadas reais.
+         Somente os nomes são deslocados.
+      ===================================================== */
 
       const cities = [
 
@@ -3150,24 +3029,24 @@
           name: "Campinas",
           lat: -22.9056,
           lon: -47.0608,
-          dx: 16,
-          dy: -8
+          dx: 28,
+          dy: -24
         },
 
         {
           name: "Indaiatuba",
           lat: -23.0903,
           lon: -47.2181,
-          dx: 16,
-          dy: 18
+          dx: 30,
+          dy: 30
         },
 
         {
           name: "São Paulo",
           lat: -23.5505,
           lon: -46.6333,
-          dx: 17,
-          dy: 5
+          dx: 30,
+          dy: 15
         }
 
       ];
@@ -3181,6 +3060,51 @@
             city.lat
           );
 
+
+        /* LINHA LIGANDO PONTO AO NOME */
+
+        const line =
+          document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "line"
+          );
+
+
+        line.setAttribute(
+          "x1",
+          x + 7
+        );
+
+
+        line.setAttribute(
+          "y1",
+          y
+        );
+
+
+        line.setAttribute(
+          "x2",
+          x + city.dx - 6
+        );
+
+
+        line.setAttribute(
+          "y2",
+          y + city.dy - 5
+        );
+
+
+        line.setAttribute(
+          "class",
+          "city-line"
+        );
+
+
+        cityLayer.appendChild(line);
+
+
+
+        /* PONTO DA CIDADE */
 
         const circle =
           document.createElementNS(
@@ -3213,10 +3137,11 @@
         );
 
 
-        cityLayer.appendChild(
-          circle
-        );
+        cityLayer.appendChild(circle);
 
+
+
+        /* NOME */
 
         const text =
           document.createElementNS(
@@ -3247,9 +3172,7 @@
           city.name;
 
 
-        cityLayer.appendChild(
-          text
-        );
+        cityLayer.appendChild(text);
 
       });
 
@@ -3265,13 +3188,9 @@
       );
 
 
-      /* =============================================
+      /* =====================================================
          FALLBACK
-
-         Caso a API do IBGE esteja temporariamente
-         indisponível, a área não fica quebrada.
-      ============================================== */
-
+      ===================================================== */
 
       stateLayer.innerHTML = `
 
@@ -3349,6 +3268,14 @@
 
       cityLayer.innerHTML = `
 
+        <line
+          x1="406"
+          y1="122"
+          x2="438"
+          y2="93"
+          class="city-line"
+        ></line>
+
         <circle
           cx="399"
           cy="122"
@@ -3357,13 +3284,21 @@
         ></circle>
 
         <text
-          x="416"
-          y="118"
+          x="442"
+          y="90"
           class="city-label"
         >
           Campinas
         </text>
 
+
+        <line
+          x1="396"
+          y1="145"
+          x2="433"
+          y2="174"
+          class="city-line"
+        ></line>
 
         <circle
           cx="389"
@@ -3373,13 +3308,21 @@
         ></circle>
 
         <text
-          x="405"
-          y="162"
+          x="439"
+          y="182"
           class="city-label"
         >
           Indaiatuba
         </text>
 
+
+        <line
+          x1="463"
+          y1="218"
+          x2="495"
+          y2="231"
+          class="city-line"
+        ></line>
 
         <circle
           cx="456"
@@ -3389,8 +3332,8 @@
         ></circle>
 
         <text
-          x="474"
-          y="224"
+          x="502"
+          y="237"
           class="city-label"
         >
           São Paulo
