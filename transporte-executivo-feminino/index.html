@@ -195,6 +195,62 @@
           "São Paulo",
           "Estado de São Paulo"
         ]
+      },
+
+      {
+        "@type": "FAQPage",
+        "@id": "https://bellaclasstransfer.com.br/transporte-executivo-feminino/#faq",
+
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "A BellaClass trabalha somente com mulheres?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BellaClass é um serviço de transporte executivo pensado para mulheres e oferece atendimento feminino."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quais regiões a BellaClass atende?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A BellaClass atende Indaiatuba, Campinas e região, São Paulo e outras localidades do Estado de São Paulo sob consulta."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A BellaClass faz transfer para aeroportos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A BellaClass realiza traslados previamente agendados para aeroportos, incluindo Viracopos, Guarulhos e Congonhas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "A BellaClass faz viagens intermunicipais?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A BellaClass realiza viagens executivas e intermunicipais mediante agendamento prévio."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "É possível contratar motorista feminina à disposição?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A BellaClass oferece motorista feminina à disposição por período, conforme disponibilidade e necessidade da cliente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Como solicitar um orçamento da BellaClass?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O orçamento pode ser solicitado pelo WhatsApp, informando data, horário, origem, destino, número de passageiros, bagagens e tipo de serviço desejado."
+            }
+          }
+        ]
       }
     ]
   }
@@ -775,10 +831,6 @@
     }
 
 
-    /* =========================================================
-       IMAGENS DOS SERVIÇOS
-    ========================================================== */
-
     .airport-image {
       background-image: url("/hero-bellaclass.jpg");
     }
@@ -794,13 +846,13 @@
       background-image:
 
         linear-gradient(
-          rgba(0,0,0,.10),
-          rgba(0,0,0,.16)
+          rgba(0,0,0,.06),
+          rgba(0,0,0,.12)
         ),
 
-        url("https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1400&q=85");
+        url("/shows-eventos-bellaclass.png");
 
-      background-position: center;
+      background-position: center 48%;
 
       background-size: cover;
 
@@ -819,8 +871,6 @@
       background-position: center;
 
       background-size: cover;
-
-      filter: none;
 
     }
 
@@ -1286,6 +1336,137 @@
 
 
     /* =========================================================
+       FAQ
+    ========================================================== */
+
+    .faq {
+
+      padding: 78px 0;
+
+      background: var(--cream);
+
+    }
+
+
+    .faq-heading {
+
+      max-width: 780px;
+
+      margin-bottom: 42px;
+
+    }
+
+
+    .faq-heading p {
+
+      margin-top: 16px;
+
+      color: var(--brown-soft);
+
+      font-size: 15px;
+
+      line-height: 1.65;
+
+    }
+
+
+    .faq-list {
+
+      max-width: 1000px;
+
+      display: grid;
+
+      gap: 14px;
+
+    }
+
+
+    .faq-item {
+
+      border: 1px solid var(--border);
+
+      border-radius: 17px;
+
+      background: rgba(255,255,255,.72);
+
+      overflow: hidden;
+
+    }
+
+
+    .faq-item summary {
+
+      position: relative;
+
+      cursor: pointer;
+
+      list-style: none;
+
+      padding: 22px 58px 22px 24px;
+
+      font-family: "Cormorant Garamond", serif;
+
+      font-size: 25px;
+
+      line-height: 1.15;
+
+      font-weight: 600;
+
+      color: var(--brown);
+
+    }
+
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+
+    .faq-item summary::after {
+
+      content: "+";
+
+      position: absolute;
+
+      right: 23px;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      color: var(--rose);
+
+      font-family: "Montserrat", sans-serif;
+
+      font-size: 25px;
+
+      font-weight: 400;
+
+    }
+
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+
+    .faq-answer {
+
+      padding: 0 24px 22px;
+
+      max-width: 900px;
+
+      color: var(--brown-soft);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+
+    }
+
+
+
+    /* =========================================================
        CTA FINAL
     ========================================================== */
 
@@ -1682,6 +1863,11 @@
         font-size: 43px;
       }
 
+
+      .faq-item summary {
+        font-size: 22px;
+      }
+
     }
 
   </style>
@@ -1717,15 +1903,10 @@
     <nav class="main-nav">
 
       <a href="/">Início</a>
-
       <a href="/#servicos">Serviços</a>
-
       <a href="/#veiculos">Veículos</a>
-
       <a href="/#destinos">Regiões Atendidas</a>
-
       <a href="/#sobre">Quem Somos</a>
-
       <a href="/#contato">Contato</a>
 
     </nav>
@@ -1802,17 +1983,11 @@
         Transporte Executivo Feminino
       </div>
 
-
       <h1>
-
         Transporte executivo<br>
-
         pensado para
-
         <em>mulheres</em>
-
       </h1>
-
 
       <p class="hero-description">
 
@@ -1844,9 +2019,7 @@
           class="hero-btn secondary"
           href="#servicos"
         >
-
           Nossos serviços
-
         </a>
 
       </div>
@@ -1861,7 +2034,6 @@
         </span>
 
       </div>
-
 
     </div>
 
@@ -1880,7 +2052,6 @@
 
     <div class="experience-grid">
 
-
       <div
         class="experience-image"
         role="img"
@@ -1894,15 +2065,10 @@
           Mais do que um trajeto
         </span>
 
-
         <h2 class="section-title">
-
           Uma experiência criada<br>
-
           para mulheres
-
         </h2>
-
 
         <p>
 
@@ -1916,38 +2082,23 @@
         <div class="quality-icons">
 
           <div class="quality-item">
-
             <i class="bi bi-shield-check"></i>
-
             Segurança
-
           </div>
 
-
           <div class="quality-item">
-
             <i class="bi bi-gem"></i>
-
             Conforto
-
           </div>
 
-
           <div class="quality-item">
-
             <i class="bi bi-lock"></i>
-
             Discrição
-
           </div>
 
-
           <div class="quality-item">
-
             <i class="bi bi-star"></i>
-
             Excelência
-
           </div>
 
         </div>
@@ -1980,10 +2131,8 @@
       </span>
 
       <h2 class="section-title">
-
         Mobilidade para a sua rotina,<br>
         em todas as ocasiões
-
       </h2>
 
     </div>
@@ -2003,21 +2152,16 @@
           </h3>
 
           <p>
-
             Pontualidade e conforto para embarques e desembarques,
             com atendimento feminino e trajeto previamente organizado.
-
           </p>
 
           <a
             href="/transfer-aeroporto/"
             class="service-link"
           >
-
             Saiba mais
-
             <span>→</span>
-
           </a>
 
         </div>
@@ -2036,21 +2180,16 @@
           </h3>
 
           <p>
-
             Deslocamentos para reuniões, compromissos,
             viagens profissionais e viagens intermunicipais.
-
           </p>
 
           <a
             href="/viagens-executivas/"
             class="service-link"
           >
-
             Saiba mais
-
             <span>→</span>
-
           </a>
 
         </div>
@@ -2069,21 +2208,16 @@
           </h3>
 
           <p>
-
             Transporte para shows, festivais, casamentos,
             festas e eventos sociais com planejamento de ida e retorno.
-
           </p>
 
           <a
             href="/shows-e-eventos/"
             class="service-link"
           >
-
             Saiba mais
-
             <span>→</span>
-
           </a>
 
         </div>
@@ -2102,22 +2236,17 @@
           </h3>
 
           <p>
-
             Atendimento para empresas e profissionais,
             com emissão de nota fiscal e possibilidade
             de faturamento mediante análise cadastral.
-
           </p>
 
           <a
             href="/transporte-corporativo/"
             class="service-link"
           >
-
             Saiba mais
-
             <span>→</span>
-
           </a>
 
         </div>
@@ -2136,22 +2265,17 @@
           </h3>
 
           <p>
-
             Atendimento por período para agendas com
             diferentes deslocamentos, oferecendo mais
             praticidade e flexibilidade.
-
           </p>
 
           <a
             href="/motorista-a-disposicao/"
             class="service-link"
           >
-
             Saiba mais
-
             <span>→</span>
-
           </a>
 
         </div>
@@ -2185,23 +2309,16 @@
       Atendimento feminino
     </span>
 
-
     <h2 class="safety-title">
-
       Segurança que começa<br>
-
       com identificação e cuidado.
-
     </h2>
 
-
     <p>
-
       A BellaClass oferece atendimento feminino,
       profissional, discreto e acolhedor para que
       cada cliente possa realizar seus deslocamentos
       com mais tranquilidade.
-
     </p>
 
   </div>
@@ -2244,10 +2361,8 @@
         </h3>
 
         <p>
-
           Transporte executivo pensado
           especialmente para mulheres.
-
         </p>
 
       </article>
@@ -2263,10 +2378,8 @@
         </h3>
 
         <p>
-
           Atendimento organizado e trajetos
           previamente planejados.
-
         </p>
 
       </article>
@@ -2282,10 +2395,8 @@
         </h3>
 
         <p>
-
           Uma experiência discreta,
           confortável e personalizada.
-
         </p>
 
       </article>
@@ -2301,10 +2412,8 @@
         </h3>
 
         <p>
-
           Atendimento de acordo com
           sua agenda e disponibilidade.
-
         </p>
 
       </article>
@@ -2347,7 +2456,6 @@
 
       <article class="vehicle-card">
 
-
         <div class="vehicle-media">
 
           <img
@@ -2362,30 +2470,22 @@
         <div class="vehicle-copy">
 
           <h3>
-
             Toyota Corolla<br>
-
             Altis Premium Híbrido
-
           </h3>
 
-
           <p>
-
             Sofisticação, conforto e uma condução silenciosa
             para proporcionar uma experiência agradável
             em cada deslocamento.
-
           </p>
 
         </div>
-
 
       </article>
 
 
       <article class="vehicle-card">
-
 
         <div class="vehicle-media">
 
@@ -2401,24 +2501,17 @@
         <div class="vehicle-copy">
 
           <h3>
-
             Volkswagen<br>
-
             T-Cross
-
           </h3>
 
-
           <p>
-
             Versatilidade, conforto e espaço para
             diferentes necessidades da sua rotina
             e das suas viagens.
-
           </p>
 
         </div>
-
 
       </article>
 
@@ -2453,15 +2546,10 @@
 
 
         <h2 class="regions-title">
-
           Indaiatuba,<br>
-
           Campinas e região,<br>
-
           São Paulo e outras localidades<br>
-
           sob consulta.
-
         </h2>
 
       </div>
@@ -2498,6 +2586,157 @@
 
 
 <!-- =========================================================
+     PERGUNTAS FREQUENTES
+========================================================== -->
+
+<section
+  class="faq"
+  id="perguntas-frequentes"
+>
+
+  <div class="container">
+
+
+    <div class="faq-heading">
+
+      <span class="eyebrow">
+        Perguntas frequentes
+      </span>
+
+      <h2 class="section-title">
+        Dúvidas sobre o atendimento BellaClass
+      </h2>
+
+      <p>
+        Conheça algumas informações importantes sobre nosso
+        transporte executivo feminino, regiões atendidas,
+        aeroportos, viagens e formas de contratação.
+      </p>
+
+    </div>
+
+
+    <div class="faq-list">
+
+
+      <details class="faq-item">
+
+        <summary>
+          A BellaClass trabalha somente com mulheres?
+        </summary>
+
+        <div class="faq-answer">
+          A BellaClass é um serviço de transporte executivo
+          pensado para mulheres, com atendimento feminino e
+          uma experiência voltada ao conforto, discrição e
+          organização de cada trajeto.
+        </div>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          Quais regiões a BellaClass atende?
+        </summary>
+
+        <div class="faq-answer">
+          Atendemos Indaiatuba, Campinas e região, São Paulo
+          e outras cidades do Estado de São Paulo sob consulta.
+          Cada solicitação é avaliada de acordo com origem,
+          destino, horário e disponibilidade.
+        </div>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          A BellaClass faz transfer para aeroportos?
+        </summary>
+
+        <div class="faq-answer">
+          Sim. Realizamos traslados previamente agendados para
+          aeroportos, incluindo Viracopos (VCP), Guarulhos (GRU)
+          e Congonhas (CGH), de acordo com a necessidade de
+          cada cliente.
+        </div>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          A BellaClass faz viagens intermunicipais?
+        </summary>
+
+        <div class="faq-answer">
+          Sim. Realizamos viagens executivas e intermunicipais,
+          tanto para compromissos profissionais quanto pessoais,
+          mediante agendamento e disponibilidade.
+        </div>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          É possível contratar motorista feminina à disposição?
+        </summary>
+
+        <div class="faq-answer">
+          Sim. O serviço de motorista à disposição pode ser
+          contratado por período para agendas com um ou mais
+          deslocamentos, conforme necessidade e disponibilidade.
+        </div>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          A BellaClass atende shows, festas e eventos?
+        </summary>
+
+        <div class="faq-answer">
+          Sim. A BellaClass realiza transporte para shows,
+          festivais, casamentos, festas e eventos sociais,
+          com possibilidade de organizar previamente os
+          deslocamentos de ida e retorno.
+        </div>
+
+      </details>
+
+
+      <details class="faq-item">
+
+        <summary>
+          Como solicitar um orçamento?
+        </summary>
+
+        <div class="faq-answer">
+          O orçamento pode ser solicitado pelo WhatsApp.
+          Para agilizar o atendimento, informe data, horário,
+          origem, destino, número de passageiros, quantidade
+          de bagagens e o tipo de serviço desejado.
+        </div>
+
+      </details>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
      CTA FINAL
 ========================================================== -->
 
@@ -2519,11 +2758,9 @@
 
 
       <p>
-
         Fale com a BellaClass e receba um atendimento
         personalizado de acordo com seu trajeto,
         horário e necessidade.
-
       </p>
 
 
@@ -2579,15 +2816,10 @@
       <nav class="footer-nav">
 
         <a href="/">Início</a>
-
         <a href="/#servicos">Serviços</a>
-
         <a href="/#veiculos">Veículos</a>
-
         <a href="/#destinos">Regiões Atendidas</a>
-
         <a href="/#sobre">Quem Somos</a>
-
         <a href="/#contato">Contato</a>
 
       </nav>
@@ -2897,7 +3129,7 @@
 
 
       /* =====================================================
-         TEXTO "ESTADO DE SÃO PAULO"
+         TEXTO ESTADO DE SÃO PAULO
       ===================================================== */
 
       const center =
@@ -2981,10 +3213,6 @@
         error
       );
 
-
-      /* =====================================================
-         FALLBACK SEM PONTOS
-      ===================================================== */
 
       stateLayer.innerHTML = `
 
