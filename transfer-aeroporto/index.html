@@ -236,6 +236,14 @@
           },
           {
             "@type": "Question",
+            "name": "A BellaClass atende viagens de madrugada?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim! Horários de atendimento são avaliados de acordo com agendamento e disponibilidade. Informe o horário do seu voo ao solicitar o orçamento para verificarmos a possibilidade de atendimento."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Como solicitar um orçamento de transfer para aeroporto?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -263,7 +271,6 @@
       --brown-soft: #725e58;
 
       --cream: #fffaf7;
-      --cream2: #fdf5f1;
 
       --white: #ffffff;
 
@@ -838,15 +845,33 @@
     }
 
 
+    /* VCP = T-CROSS */
+
     .vcp-image {
-      background-image: url("/corolla-vcp.jpg");
+
+      background-image: url("/tcross-vcp.jpg");
+
+      background-position: center;
+
+      background-size: cover;
+
     }
 
+
+    /* GRU = COROLLA */
 
     .gru-image {
+
       background-image: url("/corolla-gru.jpg");
+
+      background-position: center;
+
+      background-size: cover;
+
     }
 
+
+    /* CGH MANTIDO */
 
     .cgh-image {
 
@@ -859,33 +884,33 @@
 
       background-position: center 42%;
 
+      background-size: cover;
+
     }
 
+
+    /* ACOMPANHAMENTO DE VOO = T-CROSS */
 
     .flight-image {
 
-      background-image:
-        linear-gradient(
-          rgba(0,0,0,.22),
-          rgba(0,0,0,.22)
-        ),
-        url("/hero-bellaclass.jpg");
+      background-image: url("/tcross-vcp.jpg");
 
       background-position: center;
+
+      background-size: cover;
 
     }
 
 
+    /* IDA E RETORNO = INTERIOR DO T-CROSS */
+
     .return-image {
 
-      background-image:
-        linear-gradient(
-          rgba(0,0,0,.08),
-          rgba(0,0,0,.08)
-        ),
-        url("/shows-eventos-bellaclass.png");
+      background-image: url("/tcross-interior.jpg");
 
-      background-position: center 40%;
+      background-position: center;
+
+      background-size: cover;
 
     }
 
@@ -1291,7 +1316,7 @@
           rgba(0,0,0,.65)
         ),
 
-        url("/corolla-vcp.jpg");
+        url("/tcross-vcp.jpg");
 
       background-size: cover;
       background-position: center;
@@ -2768,7 +2793,7 @@
 
           <div class="faq-answer">
 
-            Horários de atendimento são avaliados de acordo
+            Sim! Horários de atendimento são avaliados de acordo
             com agendamento e disponibilidade. Informe o horário
             do seu voo ao solicitar o orçamento para verificarmos
             a possibilidade de atendimento.
@@ -2966,10 +2991,6 @@
 
 </a>
 
-
-<!-- =========================================================
-     MENU MOBILE
-========================================================== -->
 
 <script>
 
